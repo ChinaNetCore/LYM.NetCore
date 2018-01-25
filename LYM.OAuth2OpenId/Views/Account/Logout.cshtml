@@ -1,0 +1,27 @@
+﻿@using LYM.OAuth2OpenId
+@using LYM.OAuth2OpenId.Models
+@using LYM.OAuth2OpenId.IdrServices.Account;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model LogoutViewModel
+
+<div class="logout-page">
+    <div class="page-header">
+        <h1>退出</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <p>
+            你确定要退出登录吗？
+           </p>
+            <form asp-action="Logout">
+                <input type="hidden" name="logoutId" value="@Model.LogoutId"  />
+                <fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-primary">确定</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

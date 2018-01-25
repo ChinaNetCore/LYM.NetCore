@@ -1,0 +1,57 @@
+﻿    <link href="~/uploadtool/webuploader.css" rel="stylesheet" />
+    <link href="~/uploadtool/webuploader-demo.min.css" rel="stylesheet" />
+
+
+</head>
+<body class="gray-bg">
+    <div class="wrapper">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+
+                    <div class="ibox-content">
+                        <div class="page-container">
+
+                            <div id="uploader" class="wu-example">
+                                <div class="queueList">
+                                    <div id="dndArea" class="placeholder">
+                                        <div id="filePicker"></div>
+
+                                    </div>
+                                </div>
+                                <div class="statusBar" style="display:none;">
+                                    <div class="progress">
+                                        <span class="text">0%</span>
+                                        <span class="percentage"></span>
+                                    </div>
+                                    <div class="info"></div>
+                                    <div class="btns">
+                                        <div id="filePicker2"></div>
+                                        <div class="uploadBtn">保存</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+
+        layui.use(['jquery', 'layer', 'form'], function () {
+            var $ = layui.jquery,
+            layer = layui.layer,
+            form = layui.form();
+        });
+    </script>
+    <script src="~/uploadtool/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+        var BASE_URL = '/uploadtool';
+        var serverUrl = '@Url.Action("FCReportUpload")?phid=@ViewBag.phid';
+    </script>
+    <script src="~/uploadtool/webuploader.min.js"></script>
+    <script src="~/uploadtool/webuploader-demo.min.js"></script>

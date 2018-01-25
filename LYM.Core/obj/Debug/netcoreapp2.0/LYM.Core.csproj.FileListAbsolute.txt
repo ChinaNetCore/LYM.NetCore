@@ -1,0 +1,13 @@
+E:\NetCore\LYM.NetCore\LYM.Core\bin\Debug\netcoreapp2.0\LYM.Core.deps.json
+E:\NetCore\LYM.NetCore\LYM.Core\bin\Debug\netcoreapp2.0\LYM.Core.dll
+E:\NetCore\LYM.NetCore\LYM.Core\bin\Debug\netcoreapp2.0\LYM.Core.pdb
+E:\NetCore\LYM.NetCore\LYM.Core\bin\Debug\netcoreapp2.0\LYM.Cap.dll
+E:\NetCore\LYM.NetCore\LYM.Core\bin\Debug\netcoreapp2.0\LYM.Domain.dll
+E:\NetCore\LYM.NetCore\LYM.Core\bin\Debug\netcoreapp2.0\LYM.Cap.pdb
+E:\NetCore\LYM.NetCore\LYM.Core\bin\Debug\netcoreapp2.0\LYM.Domain.pdb
+E:\NetCore\LYM.NetCore\LYM.Core\obj\Debug\netcoreapp2.0\LYM.Core.csprojResolveAssemblyReference.cache
+E:\NetCore\LYM.NetCore\LYM.Core\obj\Debug\netcoreapp2.0\LYM.Core.csproj.CoreCompileInputs.cache
+E:\NetCore\LYM.NetCore\LYM.Core\obj\Debug\netcoreapp2.0\LYM.Core.AssemblyInfoInputs.cache
+E:\NetCore\LYM.NetCore\LYM.Core\obj\Debug\netcoreapp2.0\LYM.Core.AssemblyInfo.cs
+E:\NetCore\LYM.NetCore\LYM.Core\obj\Debug\netcoreapp2.0\LYM.Core.dll
+E:\NetCore\LYM.NetCore\LYM.Core\obj\Debug\netcoreapp2.0\LYM.Core.pdb

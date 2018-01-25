@@ -1,0 +1,357 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="renderer" content="webkit"> -->
+    <!-- <meta http-equiv="Cache-Control" content="no-siteapp" /> -->
+    <title>IdentityServer4</title>
+    <meta name="keywords" content="IdentityServer4">
+    <meta name="description" content="IdentityServer4">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link href="~/Resource/Frame/css/bootstrap.min14ed.css" rel="stylesheet">
+    <link href="~/Resource/Frame/css/font-awesome.min93e3.css" rel="stylesheet">
+    <link href="~/Resource/Frame/css/animate.min.css" rel="stylesheet">
+    <link href="~/Resource/Frame/css/style.min862f.min.css" rel="stylesheet">
+    @*<link href="~/Resource/Frame/plugins/toastr/toastr.min.css" rel="stylesheet" />*@
+    @*@Styles.Render("~/bundles/confirm_css")
+        @Styles.Render("~/bundles/toastr_css")*@
+    <script src="~/Resource/Frame/fonts/iconfont/iconfont.js"></script>
+</head>
+<body class="fixed-sidebar full-height-layout fixed-nav gray-bg" style="overflow:hidden">
+    <div id="wrapper">
+        <!--左侧导航开始-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="nav-close">
+                <i class="fa fa-times-circle"></i>
+            </div>
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-table"></i>
+
+                            <span class="nav-label">Idr4菜单</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+
+                            <li>
+                                <a class="J_menuItem" href="/Home/About">测试数据列表</a>
+                            </li>
+                            
+
+                        </ul>
+                    </li>
+
+
+                    @*<li>
+                            <a href="#">
+                                <i class="fa fa-bell"></i>
+                                <span class="nav-label">消息中心</span>
+                                <span class="fa arrow"></span>
+                            </a>
+                            <ul class="nav nav-second-level">
+                                <li> <a class="J_menuItem" href="/Systems/MessageInfo/Index">消息列表</a> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-question"></i>
+                                <span class="nav-label">帮助中心</span>
+                                <span class="fa arrow"></span>
+                            </a>
+                            <ul class="nav nav-second-level">
+                                <li> <a class="J_menuItem" href="/Systems/HelpCenter/Index">使用指南</a> </li>
+                            </ul>
+                        </li>*@
+
+                </ul>
+            </div>
+        </nav>
+        <!--左侧导航结束-->
+        <!--右侧部分开始-->
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary hidden" href="#"><i class="fa fa-bars"></i> </a>
+                        <span class="logo-img">
+                        
+                            <h1 style="color:white;font-weight:bold;position:relative;top:-15px">LYM .NET Core IdentityServer4+Cap[RabbitMQ]+EF+OSS </h1>
+                        </span>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" href="#">
+                                <i><img src="~/Resource/Frame/img/layout/notice.png" alt=""></i> <span id="noreadtip"> <span class="label label-danger">0</span></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts animated fadeInRight">
+
+                                <li>
+
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i> 您有<font color="red" id="noread">0</font>条未读消息
+                                        <span class="pull-right text-muted small">
+                                            <a href="/Systems/MessageInfo/Index" class="J_menuItem">
+                                                <strong> 未读消息 </strong>
+                                                <i class="fa fa-angle-right"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+
+                                </li>
+                                <li class="divider"></li>
+                                @*<li>
+                                         <a href="profile.html">
+                                             <div>
+                                                 <i class="fa fa-qq fa-fw"></i> 3条新回复
+                                                 <span class="pull-right text-muted small"></span>
+                                             </div>
+                                         </a>
+                                     </li>
+                                    <li class="divider"></li>*@
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a class="J_menuItem" href="/Systems/MessageInfo/Index">
+                                            <strong>所有消息</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- <li class="dropdown hidden-xs">
+                            <a class="right-sidebar-toggle" aria-expanded="false">
+                                <i class="fa fa-tasks"></i> 主题
+                            </a>
+                        </li> -->
+                        <li>
+                            <a href="javascript:void(0)" title="全屏" id="fsbutton">
+                                <i class="fa fa-arrows-alt" aria-hidden="true" style="margin-right:0;font-size:18px;"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <!-- <span><img alt="image" class="img-circle" src="~/Resource/Frame/img/profile_small.jpg" /></span> -->
+                            <a class="dropdown-toggle" href="#">
+                           
+                                <img alt="image" class="img-circle" style="width:36px;height:36px;" src="/Resource/Frame/img/loginpic.png" /> 当前用户：Administrator
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight" style="min-width:100%;">
+                                <li>
+                                    <a class="" href="javascript:void(0)" onclick="document.getElementById('File').click()">修改头像</a>
+                                </li>
+
+                               
+                                <li>
+                                        <a class="J_menuItem" href="contacts.html">联系我们</a>
+                                    </li>
+                                <li>
+                                    <a class="J_menuItem" href="/Systems/MessageInfo/Index">消息列表</a>
+
+                                </li>
+                                <li>
+                                    <a class="" href="javascript:void(0)" onclick="">修改密码</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a class="text-center" id="logout" href="javascript:;">安全退出</a>
+                                </li>
+                                
+                              
+
+                            </ul>
+                        </li>
+                    </ul>
+                    @*<form method="post" id="form1" action="/Home/Logout"></form>*@
+
+                    @using (Html.BeginForm("CoustomLogOut", "Home", FormMethod.Post,new {@id= "form1" }))
+                    {
+
+                    }
+                    <script type="text/javascript">
+                        window.onload = function () {
+
+                            document.getElementById('logout').onclick = function () {
+
+                                document.getElementById('form1').submit();
+                            }
+                        }
+
+                    </script>
+                </nav>
+            </div>
+            <div class="row content-tabs">
+                <button class="roll-nav roll-left J_tabLeft">
+                    <i class="fa fa-backward"></i>
+                </button>
+                <nav class="page-tabs J_menuTabs">
+                    <div class="page-tabs-content">
+                        <a href="javascript:;" class="active J_menuTab" data-id="/Home/Iframes">首页</a>
+
+                    </div>
+                </nav>
+                <button class="roll-nav roll-right J_tabRight">
+                    <i class="fa fa-forward"></i>
+                </button>
+                <div class="btn-group roll-nav roll-right" id="pageCloseBtn">
+                    <button class="dropdown J_tabClose" data-toggle="dropdown">
+                        <span>
+                            <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                    <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                        <li class="J_tabShowActive">
+                            <a>定位当前选项卡</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="J_tabCloseAll">
+                            <a>关闭全部选项卡</a>
+                        </li>
+                        <li class="J_tabCloseOther">
+                            <a>关闭其他选项卡</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row J_mainContent" id="content-main">
+                @RenderBody()
+               
+                @*<iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="404.html" frameborder="0" data-id="index_v1.html" seamless></iframe>*@
+            </div>
+            <div class="footer">
+                <div class="pull-right">
+                    @*&copy; 2017-2017 <a href="#" target="_blank">成都永硕科技有限公司</a>*@
+                </div>
+            </div>
+        </div>
+        <!--右侧部分结束-->
+    </div>
+
+    <script type="text/javascript" src="~/Resource/Frame/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="~/Resource/Frame/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Resource/Frame/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script type="text/javascript" src="~/Resource/Frame/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="~/Resource/Frame/js/plugins/layer/layer.min.js"></script>
+    <script type="text/javascript" src="~/Resource/Frame/js/hplus.min.js"></script>
+    <script type="text/javascript" src="~/Resource/Frame/js/contabs.min.js"></script>
+    <script type="text/javascript" src="~/Resource/Frame/js/plugins/pace/pace.min.js"></script>
+    @*<script src="~/Resource/Frame/plugins/toastr/toastr.js"></script>*@
+    @*@Scripts.Render("~/bundles/toastr_js")
+    @Scripts.Render("~/bundles/confirm_js")
+    @Scripts.Render("~/bundles/form_js")*@
+    <script>
+
+
+
+                        $(function () {
+                            window.isflsgrn = false;//ie11以下是否进入全屏标志，true为全屏状态，false为非全屏状态
+                            window.ieIsfSceen = false;//ie11是否进入全屏标志，true为全屏状态，false为非全屏状态
+                            function fullscreenEnable() {
+                                var isFullscreen = document.fullscreenEnabled ||
+                                    window.fullScreen ||
+                                    document.mozFullscreenEnabled ||
+                                    document.webkitIsFullScreen;
+                                return isFullscreen;
+                            }
+                            //全屏
+                            var fScreen = function () {
+                                var docElm = document.documentElement;
+                                if (docElm.requestFullscreen) {
+                                    docElm.requestFullscreen();
+                                }
+                                else if (docElm.msRequestFullscreen) {
+                                    docElm.msRequestFullscreen();
+                                    ieIsfSceen = true;
+                                }
+                                else if (docElm.mozRequestFullScreen) {
+                                    docElm.mozRequestFullScreen();
+                                }
+                                else if (docElm.webkitRequestFullScreen) {
+                                    docElm.webkitRequestFullScreen();
+                                } else {//对不支持全屏API浏览器的处理，隐藏不需要显示的元素
+                                    window.parent.hideTopBottom();
+                                    isflsgrn = true;
+                                }
+                            }
+                            //退出全屏
+                            var cfScreen = function () {
+                                if (document.exitFullscreen) {
+                                    document.exitFullscreen();
+                                }
+                                else if (document.msExitFullscreen) {
+                                    document.msExitFullscreen();
+                                }
+                                else if (document.mozCancelFullScreen) {
+                                    document.mozCancelFullScreen();
+                                }
+                                else if (document.webkitCancelFullScreen) {
+                                    document.webkitCancelFullScreen();
+                                } else {
+                                    window.parent.showTopBottom();
+                                    isflsgrn = false;
+                                }
+                            }
+                            //全屏按钮点击事件
+                            $("#fsbutton").click(function () {
+                                var isfScreen = fullscreenEnable();
+                                if (!isfScreen && isflsgrn == false) {
+                                    if (ieIsfSceen == true) {
+                                        document.msExitFullscreen();
+                                        ieIsfSceen = false;
+                                        return;
+                                    }
+                                    fScreen();
+                                } else {
+                                    cfScreen();
+                                }
+                            })
+                            //键盘操作
+                            $(document).keydown(function (event) {
+                                if (event.keyCode == 27 && ieIsfSceen == true) {
+                                    ieIsfSceen = false;
+                                }
+                            });
+
+                            /*顶部展开*/
+                            $('ul.nav li.dropdown').hover(
+                                function () {
+                                    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+                                },
+                                function () {
+                                    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+                                }
+                            );
+
+
+                            $("#pageTabsContent").bind("DOMNodeInserted", function (e) {
+                                if ($("#pageTabsContent").width() >= $(".content-tabs").width()) {
+                                    $("#pageCloseBtn").css("right", "0");
+                                } else {
+                                    $("#pageCloseBtn").css("right", "none");
+                                }
+                            });
+
+                            $(".logo-img > img").on("click", function () {
+                                $("body").toggleClass("mini-navbar");
+                                SmoothlyMenu();
+                            });
+
+
+
+                        });
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+E:\NetCore\LYM.NetCore\LYM.Resources\bin\Debug\netcoreapp2.0\LYM.Resources.deps.json
+E:\NetCore\LYM.NetCore\LYM.Resources\bin\Debug\netcoreapp2.0\LYM.Resources.runtimeconfig.json
+E:\NetCore\LYM.NetCore\LYM.Resources\bin\Debug\netcoreapp2.0\LYM.Resources.runtimeconfig.dev.json
+E:\NetCore\LYM.NetCore\LYM.Resources\bin\Debug\netcoreapp2.0\LYM.Resources.dll
+E:\NetCore\LYM.NetCore\LYM.Resources\bin\Debug\netcoreapp2.0\LYM.Resources.pdb
+E:\NetCore\LYM.NetCore\LYM.Resources\obj\Debug\netcoreapp2.0\LYM.Resources.csprojResolveAssemblyReference.cache
+E:\NetCore\LYM.NetCore\LYM.Resources\obj\Debug\netcoreapp2.0\LYM.Resources.csproj.CoreCompileInputs.cache
+E:\NetCore\LYM.NetCore\LYM.Resources\obj\Debug\netcoreapp2.0\LYM.Resources.AssemblyInfoInputs.cache
+E:\NetCore\LYM.NetCore\LYM.Resources\obj\Debug\netcoreapp2.0\LYM.Resources.AssemblyInfo.cs
+E:\NetCore\LYM.NetCore\LYM.Resources\obj\Debug\netcoreapp2.0\LYM.Resources.dll
+E:\NetCore\LYM.NetCore\LYM.Resources\obj\Debug\netcoreapp2.0\LYM.Resources.pdb

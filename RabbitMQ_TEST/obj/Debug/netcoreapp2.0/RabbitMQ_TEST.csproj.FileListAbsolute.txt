@@ -1,0 +1,11 @@
+E:\NetCore\LYM.NetCore\RabbitMQ_TEST\bin\Debug\netcoreapp2.0\RabbitMQ_TEST.deps.json
+E:\NetCore\LYM.NetCore\RabbitMQ_TEST\bin\Debug\netcoreapp2.0\RabbitMQ_TEST.runtimeconfig.json
+E:\NetCore\LYM.NetCore\RabbitMQ_TEST\bin\Debug\netcoreapp2.0\RabbitMQ_TEST.runtimeconfig.dev.json
+E:\NetCore\LYM.NetCore\RabbitMQ_TEST\bin\Debug\netcoreapp2.0\RabbitMQ_TEST.dll
+E:\NetCore\LYM.NetCore\RabbitMQ_TEST\obj\Debug\netcoreapp2.0\RabbitMQ_TEST.csprojResolveAssemblyReference.cache
+E:\NetCore\LYM.NetCore\RabbitMQ_TEST\obj\Debug\netcoreapp2.0\RabbitMQ_TEST.csproj.CoreCompileInputs.cache
+E:\NetCore\LYM.NetCore\RabbitMQ_TEST\obj\Debug\netcoreapp2.0\RabbitMQ_TEST.AssemblyInfoInputs.cache
+E:\NetCore\LYM.NetCore\RabbitMQ_TEST\obj\Debug\netcoreapp2.0\RabbitMQ_TEST.AssemblyInfo.cs
+E:\NetCore\LYM.NetCore\RabbitMQ_TEST\bin\Debug\netcoreapp2.0\RabbitMQ_TEST.pdb
+E:\NetCore\LYM.NetCore\RabbitMQ_TEST\obj\Debug\netcoreapp2.0\RabbitMQ_TEST.dll
+E:\NetCore\LYM.NetCore\RabbitMQ_TEST\obj\Debug\netcoreapp2.0\RabbitMQ_TEST.pdb

@@ -1,0 +1,60 @@
+﻿@*@using LYM.OAuth2OpenId
+    @using LYM.OAuth2OpenId.Models
+    @using LYM.OAuth2OpenId.IdrServices.Account;
+    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+    @model LoggedOutViewModel
+    @{
+        // set this so the layout rendering sees an anonymous user
+        ViewData["signed-out"] = true;
+    }
+    <div class="page-header logged-out">
+        <h1>
+            退出
+            <small>你已经退出登录</small>
+        </h1>
+        @if (Model.PostLogoutRedirectUri != null)
+        {
+            <div>
+                Click <a class="PostLogoutRedirectUri" href="@Model.PostLogoutRedirectUri">here</a> to return to the
+                <span>@Model.ClientName</span> application.
+            </div>
+        }
+        @if (Model.SignOutIframeUrl != null)
+        {
+            <iframe width="0" height="0" class="signout" src="@Model.SignOutIframeUrl"></iframe>
+        }
+    </div>
+    @section scripts
+        {
+        @if (Model.AutomaticRedirectAfterSignOut)
+        {
+            <script src="~/js/signout-redirect.js"></script>
+        }
+    }*@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LYM-IDR4</title>
+    <meta http-equiv='Page-Enter' content='progid:DXImageTransform.Microsoft.Pixelate(Duration=2)' />
+    <meta http-equiv='Page-Exit' content='progid:DXImageTransform.Microsoft.Pixelate(Duration=2)' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link href='/css/loginloading.css' rel='stylesheet'>
+</head>
+<body>
+    <div class='sk-three-bounce'><div class='sk-child sk-bounce1'></div><div class='sk-child sk-bounce2'></div><div class='sk-child sk-bounce3'></div></div>
+    
+    <iframe style="display:none;" frameborder="0" width="0" height="0" src="@ViewBag.SignOutIframeUrl"></iframe>
+    <a class="PostLogoutRedirectUri" href="@ViewBag.RedirectUri"></a>
+    <script src="/js/jquery-1.10.2.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/signout-redirect.js"></script>
+</body>
+</html>
+
+
+
+

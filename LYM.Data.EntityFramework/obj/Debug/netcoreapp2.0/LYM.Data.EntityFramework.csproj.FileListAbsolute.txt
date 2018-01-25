@@ -1,0 +1,11 @@
+E:\NetCore\LYM.NetCore\LYM.Data.EntityFramework\bin\Debug\netcoreapp2.0\LYM.Data.EntityFramework.deps.json
+E:\NetCore\LYM.NetCore\LYM.Data.EntityFramework\bin\Debug\netcoreapp2.0\LYM.Data.EntityFramework.dll
+E:\NetCore\LYM.NetCore\LYM.Data.EntityFramework\bin\Debug\netcoreapp2.0\LYM.Data.EntityFramework.pdb
+E:\NetCore\LYM.NetCore\LYM.Data.EntityFramework\bin\Debug\netcoreapp2.0\LYM.Domain.dll
+E:\NetCore\LYM.NetCore\LYM.Data.EntityFramework\bin\Debug\netcoreapp2.0\LYM.Domain.pdb
+E:\NetCore\LYM.NetCore\LYM.Data.EntityFramework\obj\Debug\netcoreapp2.0\LYM.Data.EntityFramework.csprojResolveAssemblyReference.cache
+E:\NetCore\LYM.NetCore\LYM.Data.EntityFramework\obj\Debug\netcoreapp2.0\LYM.Data.EntityFramework.csproj.CoreCompileInputs.cache
+E:\NetCore\LYM.NetCore\LYM.Data.EntityFramework\obj\Debug\netcoreapp2.0\LYM.Data.EntityFramework.AssemblyInfoInputs.cache
+E:\NetCore\LYM.NetCore\LYM.Data.EntityFramework\obj\Debug\netcoreapp2.0\LYM.Data.EntityFramework.AssemblyInfo.cs
+E:\NetCore\LYM.NetCore\LYM.Data.EntityFramework\obj\Debug\netcoreapp2.0\LYM.Data.EntityFramework.dll
+E:\NetCore\LYM.NetCore\LYM.Data.EntityFramework\obj\Debug\netcoreapp2.0\LYM.Data.EntityFramework.pdb

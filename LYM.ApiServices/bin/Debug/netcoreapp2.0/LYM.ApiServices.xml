@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LYM.ApiServices</name>
+    </assembly>
+    <members>
+        <member name="M:LYM.ApiServices.Controllers.ClientController.ClientTest(System.String)">
+            <summary>
+            ClientTest测试
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:LYM.ApiServices.Controllers.ValuesController.CheckReceivedMessage(LYM.Core.Model.User.UserLoginModel)">
+            <summary>
+            消息服务
+            </summary>
+            <param name="usermsg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LYM.ApiServices.Controllers.ValuesController.Get">
+            <summary>
+            取数据
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

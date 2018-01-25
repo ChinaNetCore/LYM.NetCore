@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "About";
+    Layout = null;
+}
+
+
+@model PagedResult<UserLoginModel>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="renderer" content="webkit"> -->
+    <!-- <meta http-equiv="Cache-Control" content="no-siteapp" /> -->
+    <title>IdentityServer4</title>
+    <meta name="keywords" content="IdentityServer4">
+    <meta name="description" content="IdentityServer4">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link href="~/Resource/Frame/css/bootstrap.min14ed.css" rel="stylesheet">
+    <link href="~/Resource/Frame/css/font-awesome.min93e3.css" rel="stylesheet">
+    <link href="~/Resource/Frame/css/animate.min.css" rel="stylesheet">
+    <link href="~/Resource/Frame/css/style.min862f.min.css" rel="stylesheet">
+    @*<link href="~/Resource/Frame/plugins/toastr/toastr.min.css" rel="stylesheet" />*@
+    @*@Styles.Render("~/bundles/confirm_css")
+        @Styles.Render("~/bundles/toastr_css")*@
+    <script src="~/Resource/Frame/fonts/iconfont/iconfont.js"></script>
+</head>
+<body style="padding:10px">
+    <table class="table">
+        <tr>
+            <th>编号</th>
+            <th>用户名</th>
+            <th>密码</th>
+        </tr>
+        @foreach (var item in Model.Data)
+    {
+            <tr>
+                <td>@item.UserId</td>
+                <td>@item.UserName</td>
+                <td>@item.UserPwd</td>
+
+            </tr>
+
+    }
+
+    </table>
+
+   
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+E:\NetCore\LYM.NetCore\LYM.DAL\bin\Debug\netcoreapp2.0\LYM.DAL.deps.json
+E:\NetCore\LYM.NetCore\LYM.DAL\bin\Debug\netcoreapp2.0\LYM.DAL.dll
+E:\NetCore\LYM.NetCore\LYM.DAL\obj\Debug\netcoreapp2.0\LYM.DAL.csprojResolveAssemblyReference.cache
+E:\NetCore\LYM.NetCore\LYM.DAL\obj\Debug\netcoreapp2.0\LYM.DAL.csproj.CoreCompileInputs.cache
+E:\NetCore\LYM.NetCore\LYM.DAL\obj\Debug\netcoreapp2.0\LYM.DAL.AssemblyInfoInputs.cache
+E:\NetCore\LYM.NetCore\LYM.DAL\obj\Debug\netcoreapp2.0\LYM.DAL.AssemblyInfo.cs
+E:\NetCore\LYM.NetCore\LYM.DAL\bin\Debug\netcoreapp2.0\LYM.DAL.pdb
+E:\NetCore\LYM.NetCore\LYM.DAL\bin\Debug\netcoreapp2.0\LYM.Model.dll
+E:\NetCore\LYM.NetCore\LYM.DAL\bin\Debug\netcoreapp2.0\LYM.Model.pdb
+E:\NetCore\LYM.NetCore\LYM.DAL\obj\Debug\netcoreapp2.0\LYM.DAL.dll
+E:\NetCore\LYM.NetCore\LYM.DAL\obj\Debug\netcoreapp2.0\LYM.DAL.pdb

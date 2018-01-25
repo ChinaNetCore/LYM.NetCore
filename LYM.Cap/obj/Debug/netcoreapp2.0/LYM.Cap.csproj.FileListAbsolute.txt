@@ -1,0 +1,9 @@
+E:\NetCore\LYM.NetCore\LYM.Cap\bin\Debug\netcoreapp2.0\LYM.Cap.deps.json
+E:\NetCore\LYM.NetCore\LYM.Cap\bin\Debug\netcoreapp2.0\LYM.Cap.dll
+E:\NetCore\LYM.NetCore\LYM.Cap\bin\Debug\netcoreapp2.0\LYM.Cap.pdb
+E:\NetCore\LYM.NetCore\LYM.Cap\obj\Debug\netcoreapp2.0\LYM.Cap.csproj.CoreCompileInputs.cache
+E:\NetCore\LYM.NetCore\LYM.Cap\obj\Debug\netcoreapp2.0\LYM.Cap.AssemblyInfoInputs.cache
+E:\NetCore\LYM.NetCore\LYM.Cap\obj\Debug\netcoreapp2.0\LYM.Cap.AssemblyInfo.cs
+E:\NetCore\LYM.NetCore\LYM.Cap\obj\Debug\netcoreapp2.0\LYM.Cap.dll
+E:\NetCore\LYM.NetCore\LYM.Cap\obj\Debug\netcoreapp2.0\LYM.Cap.pdb
+E:\NetCore\LYM.NetCore\LYM.Cap\obj\Debug\netcoreapp2.0\LYM.Cap.csprojResolveAssemblyReference.cache

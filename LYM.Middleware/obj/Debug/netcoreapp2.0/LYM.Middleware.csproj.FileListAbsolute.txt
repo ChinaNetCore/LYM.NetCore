@@ -1,0 +1,9 @@
+E:\NetCore\LYM.NetCore\LYM.Middleware\bin\Debug\netcoreapp2.0\LYM.Middleware.deps.json
+E:\NetCore\LYM.NetCore\LYM.Middleware\bin\Debug\netcoreapp2.0\LYM.Middleware.dll
+E:\NetCore\LYM.NetCore\LYM.Middleware\obj\Debug\netcoreapp2.0\LYM.Middleware.csproj.CoreCompileInputs.cache
+E:\NetCore\LYM.NetCore\LYM.Middleware\obj\Debug\netcoreapp2.0\LYM.Middleware.AssemblyInfoInputs.cache
+E:\NetCore\LYM.NetCore\LYM.Middleware\obj\Debug\netcoreapp2.0\LYM.Middleware.AssemblyInfo.cs
+E:\NetCore\LYM.NetCore\LYM.Middleware\obj\Debug\netcoreapp2.0\LYM.Middleware.csprojResolveAssemblyReference.cache
+E:\NetCore\LYM.NetCore\LYM.Middleware\bin\Debug\netcoreapp2.0\LYM.Middleware.pdb
+E:\NetCore\LYM.NetCore\LYM.Middleware\obj\Debug\netcoreapp2.0\LYM.Middleware.dll
+E:\NetCore\LYM.NetCore\LYM.Middleware\obj\Debug\netcoreapp2.0\LYM.Middleware.pdb

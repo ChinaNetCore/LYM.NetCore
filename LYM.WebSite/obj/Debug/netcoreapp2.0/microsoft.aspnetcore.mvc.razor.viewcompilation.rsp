@@ -1,0 +1,13 @@
+E:\NetCore\LYM.NetCore\LYM.WebSite
+--output-path=obj\Debug\netcoreapp2.0\
+--application-name=LYM.WebSite
+--content-root=E:\NetCore\LYM.NetCore\LYM.WebSite
+--file=E:\NetCore\LYM.NetCore\LYM.WebSite\Views\Home\About.cshtml
+--file=E:\NetCore\LYM.NetCore\LYM.WebSite\Views\Home\Contact.cshtml
+--file=E:\NetCore\LYM.NetCore\LYM.WebSite\Views\Home\Iframes.cshtml
+--file=E:\NetCore\LYM.NetCore\LYM.WebSite\Views\Home\Index.cshtml
+--file=E:\NetCore\LYM.NetCore\LYM.WebSite\Views\Shared\Error.cshtml
+--file=E:\NetCore\LYM.NetCore\LYM.WebSite\Views\Shared\_Layout.cshtml
+--file=E:\NetCore\LYM.NetCore\LYM.WebSite\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=E:\NetCore\LYM.NetCore\LYM.WebSite\Views\_ViewImports.cshtml
+--file=E:\NetCore\LYM.NetCore\LYM.WebSite\Views\_ViewStart.cshtml

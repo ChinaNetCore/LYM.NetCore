@@ -1,0 +1,8 @@
+﻿@if (ViewContext.ModelState.IsValid == false)
+{
+    <div class="alert alert-danger">
+        <strong>登录提示：</strong>
+        @ViewContext.ModelState[""].Errors.FirstOrDefault().ErrorMessage
+        <div  class="danger"></div>
+    </div>
+}

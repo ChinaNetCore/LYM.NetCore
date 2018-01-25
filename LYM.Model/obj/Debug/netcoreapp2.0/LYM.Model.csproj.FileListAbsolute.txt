@@ -1,0 +1,9 @@
+E:\NetCore\LYM.NetCore\LYM.Model\bin\Debug\netcoreapp2.0\LYM.Model.deps.json
+E:\NetCore\LYM.NetCore\LYM.Model\bin\Debug\netcoreapp2.0\LYM.Model.dll
+E:\NetCore\LYM.NetCore\LYM.Model\bin\Debug\netcoreapp2.0\LYM.Model.pdb
+E:\NetCore\LYM.NetCore\LYM.Model\obj\Debug\netcoreapp2.0\LYM.Model.csprojResolveAssemblyReference.cache
+E:\NetCore\LYM.NetCore\LYM.Model\obj\Debug\netcoreapp2.0\LYM.Model.csproj.CoreCompileInputs.cache
+E:\NetCore\LYM.NetCore\LYM.Model\obj\Debug\netcoreapp2.0\LYM.Model.AssemblyInfoInputs.cache
+E:\NetCore\LYM.NetCore\LYM.Model\obj\Debug\netcoreapp2.0\LYM.Model.AssemblyInfo.cs
+E:\NetCore\LYM.NetCore\LYM.Model\obj\Debug\netcoreapp2.0\LYM.Model.dll
+E:\NetCore\LYM.NetCore\LYM.Model\obj\Debug\netcoreapp2.0\LYM.Model.pdb

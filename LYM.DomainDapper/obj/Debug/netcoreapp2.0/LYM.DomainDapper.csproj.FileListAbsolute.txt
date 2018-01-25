@@ -1,0 +1,6 @@
+E:\NetCore\LYM.NetCore\LYM.DomainDapper\bin\Debug\netcoreapp2.0\LYM.DomainDapper.deps.json
+E:\NetCore\LYM.NetCore\LYM.DomainDapper\bin\Debug\netcoreapp2.0\LYM.DomainDapper.dll
+E:\NetCore\LYM.NetCore\LYM.DomainDapper\obj\Debug\netcoreapp2.0\LYM.DomainDapper.csprojResolveAssemblyReference.cache
+E:\NetCore\LYM.NetCore\LYM.DomainDapper\obj\Debug\netcoreapp2.0\LYM.DomainDapper.csproj.CoreCompileInputs.cache
+E:\NetCore\LYM.NetCore\LYM.DomainDapper\obj\Debug\netcoreapp2.0\LYM.DomainDapper.AssemblyInfoInputs.cache
+E:\NetCore\LYM.NetCore\LYM.DomainDapper\obj\Debug\netcoreapp2.0\LYM.DomainDapper.AssemblyInfo.cs

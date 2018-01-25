@@ -1,0 +1,13 @@
+E:\NetCore\LYM.NetCore\WebTEST\bin\Debug\netcoreapp2.0\WebTEST.deps.json
+E:\NetCore\LYM.NetCore\WebTEST\bin\Debug\netcoreapp2.0\WebTEST.runtimeconfig.json
+E:\NetCore\LYM.NetCore\WebTEST\bin\Debug\netcoreapp2.0\WebTEST.runtimeconfig.dev.json
+E:\NetCore\LYM.NetCore\WebTEST\bin\Debug\netcoreapp2.0\WebTEST.dll
+E:\NetCore\LYM.NetCore\WebTEST\bin\Debug\netcoreapp2.0\WebTEST.pdb
+E:\NetCore\LYM.NetCore\WebTEST\obj\Debug\netcoreapp2.0\WebTEST.csprojResolveAssemblyReference.cache
+E:\NetCore\LYM.NetCore\WebTEST\obj\Debug\netcoreapp2.0\WebTEST.csproj.CoreCompileInputs.cache
+E:\NetCore\LYM.NetCore\WebTEST\obj\Debug\netcoreapp2.0\WebTEST.AssemblyInfoInputs.cache
+E:\NetCore\LYM.NetCore\WebTEST\obj\Debug\netcoreapp2.0\WebTEST.AssemblyInfo.cs
+E:\NetCore\LYM.NetCore\WebTEST\obj\Debug\netcoreapp2.0\WebTEST.dll
+E:\NetCore\LYM.NetCore\WebTEST\obj\Debug\netcoreapp2.0\WebTEST.pdb
+E:\NetCore\LYM.NetCore\WebTEST\bin\Debug\netcoreapp2.0\LYM.Middleware.dll
+E:\NetCore\LYM.NetCore\WebTEST\bin\Debug\netcoreapp2.0\LYM.Middleware.pdb

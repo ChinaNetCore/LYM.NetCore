@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IdentityServer4.AccessTokenValidation</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilderExtensions">
+            <summary>
+            Extensions for creating scope related authorization policies
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilderExtensions.RequireScope(Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder,System.String[])">
+            <summary>
+            Adds a policy to check for required scopes.
+            </summary>
+            <param name="builder"></param>
+            <param name="scope">List of any required scopes. The token must contain at least one of the listed scopes.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Authorization.ScopePolicy">
+            <summary>
+            Helper for creating scope-related policies
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Authorization.ScopePolicy.Create(System.String[])">
+            <summary>
+            Creates a policy to check for required scopes.
+            </summary>
+            <param name="scopes">List of any required scopes. The token must contain at least one of the listed scopes.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Builder.IdentityServerAuthenticationExtensions">
+            <summary>
+            Extensions for registering the IdentityServer authentication handler
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.IdentityServerAuthenticationExtensions.AddIdentityServerAuthentication(Microsoft.AspNetCore.Authentication.AuthenticationBuilder)">
+            <summary>
+            Registers the IdentityServer authentication handler.
+            </summary>
+            <param name="builder">The builder.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.IdentityServerAuthenticationExtensions.AddIdentityServerAuthentication(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.String)">
+            <summary>
+            Registers the IdentityServer authentication handler.
+            </summary>
+            <param name="builder">The builder.</param>
+            <param name="authenticationScheme">The authentication scheme.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.IdentityServerAuthenticationExtensions.AddIdentityServerAuthentication(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Action{IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions})">
+            <summary>
+            Registers the IdentityServer authentication handler.
+            </summary>
+            <param name="builder">The builder.</param>
+            <param name="configureOptions">The configure options.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.IdentityServerAuthenticationExtensions.AddIdentityServerAuthentication(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.String,System.Action{IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions})">
+            <summary>
+            Registers the IdentityServer authentication handler.
+            </summary>
+            <param name="builder">The builder.</param>
+            <param name="authenticationScheme">The authentication scheme.</param>
+            <param name="configureOptions">The configure options.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Builder.IdentityServerAuthenticationExtensions.AddIdentityServerAuthentication(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.String,System.Action{Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions},System.Action{Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions})">
+            <summary>
+            Registers the IdentityServer authentication handler.
+            </summary>
+            <param name="builder">The builder.</param>
+            <param name="authenticationScheme">The authentication scheme.</param>
+            <param name="jwtBearerOptions">The JWT bearer options.</param>
+            <param name="introspectionOptions">The introspection options.</param>
+            <returns></returns>
+        </member>
+        <member name="T:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationDefaults">
+            <summary>
+            Constants for IdentityServer authentication.
+            </summary>
+        </member>
+        <member name="F:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationDefaults.AuthenticationScheme">
+            <summary>
+            The authentication scheme
+            </summary>
+        </member>
+        <member name="T:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler">
+            <summary>
+            Authentication handler for validating both JWT and reference tokens
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.#ctor(Microsoft.Extensions.Options.IOptionsMonitor{IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions},Microsoft.Extensions.Logging.ILoggerFactory,System.Text.Encodings.Web.UrlEncoder,Microsoft.AspNetCore.Authentication.ISystemClock)">
+            <inheritdoc />
+        </member>
+        <member name="M:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync">
+            <summary>
+            Tries to validate a token on the current request
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions">
+            <summary>
+            Options for IdentityServer authentication
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.Authority">
+            <summary>
+            Base-address of the token issuer
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.RequireHttpsMetadata">
+            <summary>
+            Specifies whether HTTPS is required for the discovery endpoint
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.SupportedTokens">
+            <summary>
+            Specifies which token types are supported (JWT, reference or both)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.TokenRetriever">
+            <summary>
+            Callback to retrieve token from incoming request
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.ApiName">
+            <summary>
+            Name of the API resource used for authentication against introspection endpoint
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.ApiSecret">
+            <summary>
+            Secret used for authentication against introspection endpoint
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.LegacyAudienceValidation">
+            <summary>
+            Enable if this API is being secured by IdentityServer3, and if you need to support both JWTs and reference tokens.
+            If you enable this, you should add scope validation for incoming JWTs.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.NameClaimType">
+            <summary>
+            Claim type for name
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.RoleClaimType">
+            <summary>
+            Claim type for role
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.InboundJwtClaimTypeMap">
+            <summary>
+            Specifies inbound claim type map for JWT tokens (mainly used to disable the annoying default behavior of the MS JWT handler)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.EnableCaching">
+            <summary>
+            Specifies whether caching is enabled for introspection responses (requires a distributed cache implementation)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.CacheDuration">
+            <summary>
+            Specifies ttl for introspection response caches
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.SaveToken">
+            <summary>
+            specifies whether the token should be saved in the authentication properties
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.JwtValidationClockSkew">
+            <summary>
+            specifies the allowed clock skew when validating JWT tokens
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.JwtBackChannelHandler">
+            <summary>
+            back-channel handler for JWT middleware
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.IntrospectionBackChannelHandler">
+            <summary>
+            back-channel handler for introspection endpoint
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.IntrospectionDiscoveryHandler">
+            <summary>
+            back-channel handler for introspection discovery endpoint
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.BackChannelTimeouts">
+            <summary>
+            timeout for back-channel operations
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.JwtBearerEvents">
+            <summary>
+            events for JWT middleware
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.DiscoveryDocumentRefreshInterval">
+            <summary>
+            Specifies how often the cached copy of the discovery document should be refreshed.
+            If not set, it defaults to the default value of Microsoft's underlying configuration manager (which right now is 24h).
+            If you need more fine grained control, provide your own configuration manager on the JWT options.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.SupportsJwt">
+            <summary>
+            Gets a value indicating whether JWTs are supported.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationOptions.SupportsIntrospection">
+            <summary>
+            Gets a value indicating whether reference tokens are supported.
+            </summary>
+        </member>
+        <member name="T:IdentityServer4.AccessTokenValidation.SupportedTokens">
+            <summary>
+            Supported token types
+            </summary>
+        </member>
+        <member name="F:IdentityServer4.AccessTokenValidation.SupportedTokens.Both">
+            <summary>
+            JWTs and reference tokens
+            </summary>
+        </member>
+        <member name="F:IdentityServer4.AccessTokenValidation.SupportedTokens.Jwt">
+            <summary>
+            JWTs only
+            </summary>
+        </member>
+        <member name="F:IdentityServer4.AccessTokenValidation.SupportedTokens.Reference">
+            <summary>
+            Reference tokens only
+            </summary>
+        </member>
+    </members>
+</doc>

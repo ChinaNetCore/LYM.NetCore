@@ -1,0 +1,3560 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="chrome=1"> -->
+    <title>jquery-confirm.js | The multipurpose alert & confirm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="description" content="A multipurpose alert, confirm plugin, alternative to the native alert() and confirm() functions. Supports features like auto-close, themes, animations, and more.">
+    <link rel="canonical" href="https://craftpip.github.io/jquery-confirm" />
+    <link rel="icon" type="img/png" href="http://craftpip.com/i/assets/img/fav.png">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index,follow,noodp,noydir" />
+    <meta name="google-site-verification" content="T_M_Ym5DQ-cEQQhx_jswyCBTssIdgtewICcvb3sgh8g" />
+    <meta name="Keywords" content="jquery.confirm, jquery confirm, jquery alert, jquery prompt, jquery dialog, javascript, bootstrap" />
+    <link rel="apple-touch-icon" sizes="57x57" href="http://craftpip.com/i/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="http://craftpip.com/i/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="http://craftpip.com/i/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="http://craftpip.com/i/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" href="http://craftpip.com/i/apple-touch-icon-57x57.png" />
+    <meta property="og:title" content="jquery-confirm.js | The multipurpose alert &amp; confirm" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://craftpip.com/i/apple-touch-icon-57x57.png" />
+    <meta property="og:url" content="https://craftpip.github.io/jquery-confirm" />
+    <meta property="og:description" content="A multipurpose alert & confirm plugin, alternative to the native alert() and confirm() functions. Supports features like auto-close, themes, animations, and more." />
+    <meta property="og:site_name" content="craftpip.github.io" />
+
+    <link rel="stylesheet" href="demo/libs/bundled.css">
+    <script src="demo/libs/bundled.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <link rel="stylesheet" href="demo/demo.css">
+    <script>
+        var version = '3.2.3';
+    </script>
+    <!-- Add the minified version of files from the /dist/ folder. -->
+    <!-- jquery-confirm files -->
+    <link rel="stylesheet" type="text/css" href="css/jquery-confirm.css" />
+    <script type="text/javascript" src="js/jquery-confirm.js"></script>
+    <!--<script type="text/javascript"-->
+    <!--src="dist/jquery-confirm.min.js"></script>-->
+    <!--END jquery-confirm files-->
+</head>
+
+<body data-spy="scroll" data-target=".navbar">
+    <header class="navbar navbar-static-top navbar-default navheader">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand jconfirm-logo" href="http://craftpip.github.io/jquery-confirm">
+                </a>
+            </div>
+            <nav id="bs-navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="">
+                        <a href="http://github.com/craftpip/jquery-confirm"><i class="fa fa-github"></i> Project home</a>
+                    </li>
+                    <li class="">
+                        <a href="http://github.com/craftpip/jquery-confirm/issues/new">Suggest feature</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Versions
+                        <span class="caret"></span>
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v3.2.0">v3.2.0</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v3.1.1">v3.1.1</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v3.0.3">v3.0.3</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v3.0.1">v3.0.1</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v3.0.0">v3.0.0</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v2.5.1">v2.5.1</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v2.0">v2.0</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v1.8">v1.8</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v1.7.9">v1.7.9</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v1.7.8">v1.7.8</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v1.7.5">v1.7.5</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v1.7.3">v1.7.3</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v1.7">v1.7</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v1.6">v1.6</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v1.5.3">v1.5.3</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v1.5.1">v1.5.1</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v1.5">v1.5</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v1.1.3">v1.1.3</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v1.1">v1.1</a>
+                            </li>
+                            <li>
+                                <a href="http://craftpip.github.io/jquery-confirm/v1.0">v1.0</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="github-button" href="https://github.com/craftpip/jquery-confirm" data-style="mega" data-count-href="/craftpip/jquery-confirm/stargazers" data-count-api="/repos/craftpip/jquery-confirm#stargazers_count" data-count-aria-label="# stargazers on GitHub"
+                            aria-label="Star craftpip/jquery-confirm on GitHub">Star
+                    </a>
+                    </li>
+                    <li>
+                        <a class="twitter-follow-button" data-show-count="false" data-size="large" href="https://twitter.com/craftpip" data-show-count="false" data-lang="en">
+                        Follow @craftpip
+                    </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="header" id="content" tabindex="-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 style="margin-top: 7px;" class="text-center">
+                        <img src="jquery-confirm.png" alt="JQUERY-CONFIRM" />
+                    </h1>
+
+                    <p>
+                        <em>alerts</em>, <em>confirms</em> and <em>dialogs</em> in
+                        <strong>one.</strong>
+                    </p>
+
+                    <div class="row download-btns">
+                        <div class="col-md-12">
+                            <div style="height: 15px;"></div>
+                            <a href="https://github.com/craftpip/jquery-confirm/releases/download/v3.2.3/jquery-confirm-v3.2.3.zip" class="btn btn-lg">Download v3.2.3
+                        </a>
+                            <a href="https://github.com/craftpip/jquery-confirm" class="btn btn-lg"><i class="fa fa-github"></i> View on GitHub
+                        </a>
+                            <div style="height: 15px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div style="height:50px"></div>-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-12">
+                <div class="space10"></div>
+                <div class="space10"></div>
+                <p>
+                    <strong>jquery-confirm
+                    v
+                    <span class="version">-</span>
+                    docs
+                </strong>
+                    <br>
+                    <a href="https://github.com/craftpip/jquery-confirm">
+                    view on <i class="fa fa-github"></i> Github
+                </a>
+                </p>
+                <div class="spacer15"></div>
+                <div id="my-nav">
+                    <ul class="nav nav-list">
+                        <li>
+                            <a href="#quickfeatures"> Features特征</a>
+                        </li>
+                        <li>
+                            <a href="#getting-started">开始</a>
+                            <ul class="nav nav-list">
+                                <li>
+                                    <a href="#installation">安装</a>
+                                </li>
+                                <li>
+                                    <a href="#alert"> $.alert</a>
+                                </li>
+                                <li>
+                                    <a href="#confirm"> $.confirm</a>
+                                </li>
+                                <li>
+                                    <a href="#dialog"> $.dialog</a>
+                                </li>
+                                <li>
+                                    <a href="#jquery-fn"> $.fn.confirm</a>
+                                </li>
+                                <li>
+                                    <a href="#shorthand"> 快速使用</a>
+                                </li>
+                                <li>
+                                    <a href="#lazy-open"> Lazy Open</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#buttons">按钮</a>
+                            <ul class="nav nav-list">
+                                <li>
+                                    <a href="#defining-buttons"> Definition定义</a>
+                                </li>
+                                <li>
+                                    <a href="#buttontext"> Text文字</a>
+                                </li>
+                                <li>
+                                    <a href="#buttonstyle"> Style样式</a>
+                                </li>
+                                <li>
+                                    <a href="#button_keys"> Keys按键</a>
+                                </li>
+                                <li>
+                                    <a href="#button-functions"> Functions功能</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#customizing">Customizing定制</a>
+                            <ul class="nav nav-list">
+                                <li>
+                                    <a href="#dialog-type"> Dialog type对话框类型</a>
+                                </li>
+                                <li>
+                                    <a href="#icons"> Icons图标</a>
+                                </li>
+                                <li>
+                                    <a href="#close-icon"> Close icon关闭图标</a>
+                                </li>
+                                <li>
+                                    <a href="#custom-width"> Custom width自定义宽度</a>
+                                </li>
+                                <li>
+                                    <a href="#custom-width-without-bootstrap"> Custom width w/o bootstrap</a>
+                                </li>
+                                <li>
+                                    <a href="#namespaced-bootstrap">bootstrap命名空间</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#draggable"> Draggable拖拽</a>
+                        </li>
+                        <li>
+                            <a href="animations.html"> Animations动画 <span style="margin-left: 5px;"><i
+                                class="fa fa-external-link"></i></span></a>
+                            <ul class="nav nav-list">
+                                <li>
+                                    <a href="#animations">Animations动画</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="themes.html"> Themes主题 <span style="margin-left: 5px;"><i
+                                class="fa fa-external-link"></i></span></a>
+                            <ul class="nav nav-list">
+                                <li>
+                                    <a href="#themes">Themes主题</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#ajaxloading"> Ajax加载</a>
+                            <ul class="nav nav-list">
+                                <li>
+                                    <a href="#urlprefix">URL: prefix method</a>
+                                </li>
+                                <li>
+                                    <a href="#ajaxpromise">Ajax promise method</a>
+                                </li>
+                                <li>
+                                    <a href="#content-loaded">Ajax complete callback</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#autoclose"> Auto close自动关闭</a>
+                        </li>
+                        <li>
+                            <a href="#backgrounddismiss"> Background dismiss背景层关闭</a>
+                            <ul class="nav nav-list">
+                                <li>
+                                    <a href="#backgrounddismiss"> Background dismiss背景层关闭</a>
+                                </li>
+                                <li>
+                                    <a href="#backgrounddismiss-animations">Dismiss animations取消动画</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#escape-key"> Escape key</a>
+                        </li>
+                        <li>
+                            <a href="#rtl"> RTL Support</a>
+                        </li>
+                        <li>
+                            <a href="#callbacks"> Callbacks回调</a>
+                        </li>
+                        <li>
+                            <a href="#globaldefaults"> Global defaults全局默认值</a>
+                        </li>
+                        <li>
+                            <a href="#options"> Options选项</a>
+                        </li>
+                        <li>
+                            <a href="#api"> Api</a>
+                            <ul class="nav nav-list">
+                                <li>
+                                    <a href="#api-settitle"> .setTitle()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-setcontent"> .setContent()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-setcontentprepend"> .setContentPrepend()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-setcontentappend"> .setContentAppend()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-set-type"> .setType()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-button-settext"> .&lt;buttonName&gt;.setText()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-button-addclass"> .&lt;buttonName&gt;.addClass()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-button-removeclass"> .&lt;buttonName&gt;.removeClass()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-button-disable"> .&lt;buttonName&gt;.disable()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-button-enable"> .&lt;buttonName&gt;.enable()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-button-hide"> .&lt;buttonName&gt;.hide()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-button-show"> .&lt;buttonName&gt;.show()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-seticon"> .setIcon()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-close"> .close()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-open"> .open()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-isclosed"> .isClosed()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-isopen"> .isOpen()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-setdialogcenter"> .setDialogCenter()</a>
+                                </li>
+                                <li>
+                                    <a href="#api-body"> .$body</a>
+                                </li>
+                                <li>
+                                    <a href="#api-content"> .$content</a>
+                                </li>
+                                <li>
+                                    <a href="#api-title"> .$title</a>
+                                </li>
+                                <li>
+                                    <a href="#api-icon"> .$icon</a>
+                                </li>
+                                <li>
+                                    <a href="#api-target"> .$target</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-12">
+
+                <!-- jquery-confirm home top -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9535136378177592" data-ad-slot="2289264865" data-ad-format="auto"></ins>
+
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                <section>
+                    <header>
+                        <h3>Welcome to jquery-confirm!</h3>
+
+                        <p>
+                            使用方便，灵活度高！<br/> 一个提供了一系列功能的jQuery插件，，如自动关闭，Ajax加载，主题，动画等。 <br> 这个插件是积极开发的，我很想你有你的建议。
+                        </p>
+                        <a href="https://github.com/craftpip/jquery-confirm/issues" target="empty" class="btn btn-success"><i class="fa fa-bug fa-fw"></i> Please post your Suggestions here.
+                    </a>
+                        <div class="space10"></div>
+                        <!--<a href="https://craftpip.github.io/angular-confirm" target="_blank">-->
+                        <a href="https://craftpip.github.io/angular-confirm" target="_blank" class="">
+                            <div class="alert alert-info">
+                                <img src="https://craftpip.github.io/angular-confirm/angular-confirm.png" style="width: 200px;" class="pull-left" alt="">
+                                <p>
+                                    <strong>angular-confirm is here</strong>
+                                    <br> 在angular scope中使用confirm modal，并具有jquery-confirm的所有功能
+                                </p>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                        <!--</a>-->
+                    </header>
+                </section>
+                <hr>
+                <section id="quickfeatures">
+                    <h2>特征</h2>
+
+                    <p>这些功能实际上可以像这样使用。</p>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="btn btn-primary btn-block example-p-1">Alerts</button>
+                            <p class="text-success">优雅的警告。</p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <button class="btn btn-primary btn-block example-p-2">Confirmation</button>
+                            <p class="text-success">堆叠确认</p>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-primary btn-block example-p-70-type">Alert类型</button>
+                            <p class="text-success">Success, error, warning</p>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-primary btn-block example-p-7-1">Prompt</button>
+                            <p class="text-success">是否需要input?</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="btn btn-primary btn-block example-p-4">Dialogs</button>
+                            <p class="text-success">它是一个对话框。</p>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-primary btn-block example-p-3">Background dismiss</button>
+                            <p class="text-success">Not so important modal</p>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-primary btn-block example-p-5">Asynchronous content</button>
+                            <p class="text-success">远程加载（异步加载内容）</p>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-primary btn-block example-p-6">Auto-close</button>
+                            <p class="text-success">一些行动也许至关重要</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="btn btn-primary btn-block example-p-7">Keystrokes</button>
+                            <p class="text-success">响应点击键盘</p>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-primary btn-block example-pc-1">Alignment</button>
+                            <p class="text-success">自动居中</p>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-primary btn-block example-pc-2">Images</button>
+                            <p class="text-success">加载图片</p>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-primary btn-block example-pc-3">Animations</button>
+                            <p class="text-success">清除动画</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="btn btn-primary btn-block example-p-7-2">Draggable</button>
+                            <p class="text-success">拖动我</p>
+                        </div>
+                    </div>
+
+                    <h2>Themes（主题）</h2>
+
+                    <p>jquery-confirm加载了所有常见用例的主题。</p>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="btn btn-info btn-block example-the-1">Modern</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-info btn-block example-the-3">Material</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-info btn-block example-the-4">Bootstrap</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-info btn-block example-the-2">Supervan</button>
+                        </div>
+                    </div>
+
+                    <script type="text/javascript">
+                        $('.example-the-1').on('click', function() {
+                            $.confirm({
+                                icon: 'fa fa-question',
+                                theme: 'modern',
+                                closeIcon: true,
+                                animation: 'scale',
+                                type: 'orange',
+                            });
+                        });
+                        $('.example-the-2').on('click', function() {
+                            $.confirm({
+                                icon: 'fa fa-question',
+                                theme: 'supervan',
+                                closeIcon: true,
+                                animation: 'scale',
+                                type: 'orange',
+                            });
+                        });
+                        $('.example-the-3').on('click', function() {
+                            $.confirm({
+                                icon: 'fa fa-question',
+                                theme: 'material',
+                                closeIcon: true,
+                                animation: 'scale',
+                                type: 'orange',
+                            });
+                        });
+                        $('.example-the-4').on('click', function() {
+                            $.confirm({
+                                icon: 'fa fa-question',
+                                theme: 'bootstrap',
+                                closeIcon: true,
+                                animation: 'scale',
+                                type: 'orange',
+                            });
+                        });
+
+                        // alert
+                        $('.example-p-1').on('click', function() {
+                            $.alert({
+                                title: 'Alert alert!',
+                                content: 'This is a simple alert. <br> with some <strong>HTML</strong> <em>contents</em>',
+                                icon: 'fa fa-rocket',
+                                animation: 'zoom',
+                                closeAnimation: 'zoom',
+                                buttons: {
+                                    okay: {
+                                        text: '确定',
+                                        btnClass: 'btn-blue'
+                                    }
+                                }
+                            });
+                        });
+
+                        // confirmation
+                        $('.example-p-2').on('click', function() {
+                            $.confirm({
+                                title: 'A secure action',
+                                content: 'Its smooth to do multiple confirms at a time. <br> Click confirm or cancel for another modal',
+                                icon: 'fa fa-question-circle',
+                                animation: 'scale',
+                                closeAnimation: 'scale',
+                                opacity: 0.5,
+                                buttons: {
+                                    'confirm': {
+                                        text: 'Proceed',
+                                        btnClass: 'btn-blue',
+                                        action: function() {
+                                            $.confirm({
+                                                title: 'This maybe critical',
+                                                content: 'Critical actions can have multiple confirmations like this one.',
+                                                icon: 'fa fa-warning',
+                                                animation: 'zoom',
+                                                closeAnimation: 'zoom',
+                                                buttons: {
+                                                    confirm: {
+                                                        text: 'Yes, sure!',
+                                                        btnClass: 'btn-orange',
+                                                        action: function() {
+                                                            $.alert('A very critical action <strong>triggered!</strong>');
+                                                        }
+                                                    },
+                                                    cancel: function() {
+                                                        $.alert('you clicked on <strong>cancel</strong>');
+                                                    }
+                                                }
+                                            });
+                                        }
+                                    },
+                                    cancel: function() {
+                                        $.alert('you clicked on <strong>cancel</strong>');
+                                    },
+                                    moreButtons: {
+                                        text: 'something else',
+                                        action: function() {
+                                            $.alert('you clicked on <strong>something else</strong>');
+                                        }
+                                    },
+                                }
+                            });
+                        });
+
+                        // prompt
+                        $('.example-p-7-1').on('click', function() {
+                            $.confirm({
+                                title: 'A simple form',
+                                content: 'url:form.html',
+                                buttons: {
+                                    sayMyName: {
+                                        text: 'Say my name',
+                                        btnClass: 'btn-orange',
+                                        action: function() {
+                                            var input = this.$content.find('input#input-name');
+                                            var errorText = this.$content.find('.text-danger');
+                                            if (input.val() == '') {
+                                                errorText.html('Please don\'t keep the name field empty!').slideDown(200);
+                                                return false;
+                                            } else {
+                                                $.alert('Hello ' + input.val() + ', i hope you have a great day!');
+                                            }
+                                        }
+                                    },
+                                    later: function() {
+                                        // do nothing.
+                                    }
+                                }
+                            });
+                        });
+
+                        // alert types
+                        $('.example-p-70-type').on('click', function() {
+                            $.alert({
+                                title: 'Oh no',
+                                type: 'red',
+                                content: 'Something bad, bad happened.',
+                            });
+                        });
+
+                        // background dismiss
+                        $('.example-p-3').on('click', function() {
+                            $.alert({
+                                title: 'Background dismiss',
+                                content: 'Click outside the modal to close it.',
+                                animation: 'top',
+                                closeAnimation: 'bottom',
+                                backgroundDismiss: true,
+                                buttons: {
+                                    okay: {
+                                        text: 'okay',
+                                        btnClass: 'btn-blue',
+                                        action: function() {
+                                            // do nothing
+                                        }
+                                    }
+                                }
+                            });
+                        });
+
+                        // using as dialogs
+                        $('.example-p-4').on('click', function() {
+                            $.dialog({
+                                title: 'Title comes here',
+                                content: 'Just need a popup without buttons, <strong>no problem!</strong><br>' +
+                                    '<h3>disable the buttons</h3>' +
+                                    '<h4><strong>and you get a dialog modal</strong></h4>' +
+                                    '<h5><em>Well, that close icon is shown if no buttons are here (u need something to close the modal right), u can explicitly control that too.</em></h5>' +
+                                    '<button type="button" class="btn btn-success">Click me to change the content</button>',
+                                animation: 'scale',
+                                onOpen: function() {
+                                    var that = this;
+                                    this.$content.find('button').click(function() {
+                                        that.setContent('As simple as that !');
+                                    })
+                                }
+                            });
+                        });
+
+                        // asynchronous content
+                        $('.example-p-5').on('click', function() {
+                            $.dialog({
+                                title: 'Asynchronous content',
+                                content: 'url:table.html',
+                                animation: 'zoom',
+                                columnClass: 'medium',
+                                closeAnimation: 'scale',
+                                backgroundDismiss: true,
+                            });
+                        });
+
+                        // auto close
+                        $('.example-p-6').on('click', function() {
+                            $.confirm({
+                                title: 'Auto close',
+                                content: 'Some actions maybe critical, prevent it with the Auto close. This dialog will automatically trigger cancel after the timer runs out.',
+                                autoClose: 'cancelAction|10000',
+                                escapeKey: 'cancelAction',
+                                buttons: {
+                                    confirm: {
+                                        btnClass: 'btn-red',
+                                        text: 'Delete ben\'s account',
+                                        action: function() {
+                                            $.alert('You deleted Ben\'s account!');
+                                        }
+                                    },
+                                    cancelAction: {
+                                        text: 'Cancel',
+                                        action: function() {
+                                            $.alert('Ben just got saved!');
+                                        }
+                                    }
+                                }
+                            });
+                        });
+
+                        // key strokes
+                        $('.example-p-7').on('click', function() {
+                            $.confirm({
+                                title: 'Keystrokes',
+                                escapeKey: true, // close the modal when escape is pressed.
+                                content: 'Press the <strong>escape key</strong> to close the modal. That works.' +
+                                    '<br> press <strong>enter key</strong> to trigger okay.' +
+                                    '<br> press <strong>shift or ctrl key</strong> to trigger cancel.',
+                                backgroundDismiss: true, // for escapeKey to work, backgroundDismiss should be enabled.
+                                buttons: {
+                                    okay: {
+                                        keys: [
+                                            'enter'
+                                        ],
+                                        action: function() {
+                                            $.alert('<strong>Okay button</strong> was triggered.');
+                                        }
+                                    },
+                                    cancel: {
+                                        keys: [
+                                            'ctrl',
+                                            'shift'
+                                        ],
+                                        action: function() {
+                                            $.alert('<strong>Cancel button</strong> was triggered.');
+                                        }
+                                    }
+                                }
+                            });
+                        });
+
+                        // alignment
+                        $('.example-pc-1').on('click', function() {
+                            $.confirm({
+                                title: 'Gracefully center aligned',
+                                content: '<p>You can add content and not worry about the alignment. The goal is to make a Interactive dialog!.</p>' +
+                                    '<button type="button" class="btn btn-success">Click me to add more content</button> <span> <br></span> ',
+                                buttons: {
+                                    someButton: {
+                                        text: 'Add wow',
+                                        btnClass: 'btn-green',
+                                        action: function() {
+                                            this.$content.find('span').append('<br>Wowww');
+                                            return false; // prevent dialog from closing.
+                                        }
+                                    },
+                                    someOtherButton: {
+                                        text: 'Clear it',
+                                        btnClass: 'btn-orange',
+                                        action: function() {
+                                            this.$content.find('span').html('');
+                                            return false; // prevent dialog from closing.
+                                        }
+                                    },
+                                    close: function() {
+                                        // lets the user close the modal.
+                                    }
+                                },
+                                onOpen: function() {
+                                    // onOpen attach the events.
+                                    var that = this;
+                                    this.$content.find('button').click(function() {
+                                        that.$content.find('span').append('<br>This is awesome!!!!');
+                                    });
+                                },
+                            });
+                        });
+
+                        // working with images
+                        // todo: images is not tested yet.
+                        $('.example-pc-2').on('click', function() {
+                            $.confirm({
+                                title: 'Adding images',
+                                content: 'Images from flickr <br><img src="https://c2.staticflickr.com/4/3891/14354989289_2eec0ba724_b.jpg">',
+                                animation: 'zoom',
+                                animationClose: 'top',
+                                buttons: {
+                                    confirm: {
+                                        text: 'Add more',
+                                        btnClass: 'btn-blue',
+                                        action: function() {
+                                            this.$content.append('<img src="https://c2.staticflickr.com/6/5248/5240523362_8d6d315391_b.jpg">');
+                                            return false; // prevent dialog from closing.
+                                        }
+                                    },
+                                    cancel: function() {
+                                        // lets the user close the modal.
+                                    }
+                                },
+                            });
+                        });
+
+                        // animations
+                        $(' .example-pc-3').on('click', function() {
+                            $.alert({
+                                title: 'Animations',
+                                content: 'jquery-confirm provides a lot of open &amp; close animations out of the box. <br>The best part is, you can add custom ones too.',
+                                animation: 'rotate',
+                                closeAnimation: 'right',
+                                buttons: {
+                                    zoom: function() {
+                                        this.setCloseAnimation('zoom');
+                                    },
+                                    rotate: function() {
+                                        this.setCloseAnimation('rotate');
+                                    },
+                                    scale: function() {
+                                        this.setCloseAnimation('scale');
+                                    },
+                                    top: function() {
+                                        this.setCloseAnimation('top');
+                                    }
+                                },
+                                backgroundDismiss: function() {
+                                    return false;
+                                },
+                            });
+                        });
+
+                        $('.example-p-7-2').on('click', function() {
+                            $.alert({
+                                title: 'A draggable dialog',
+                                content: 'This dialog is draggable, use the title to drag it around. It wont touch the screen borders',
+                                type: 'blue',
+                                draggable: true,
+                            });
+                        })
+                    </script>
+                </section>
+
+                <section>
+                    <h2>Whats new <span style="color: #aaa">in v3.2.3</span></h2>
+                    <ul>
+                        <li>Added lazyOpen option（添加了lazyOpen选项）</li>
+                        <li>Added button properties isHidden and isDisabled（添加的按钮属性：isHidden、isDisabled）</li>
+                        <li>setBoxWidth method added</li>
+                        <li>Bug fixes</li>
+                    </ul>
+                </section>
+
+                <!-- Installation -->
+                <section id="getting-started">
+                    <h2>Getting started</h2>
+
+                    <div class="alert alert-info">
+                        Notes on migrating from v2 to v3. <br>
+                        <a href="https://github.com/craftpip/jquery-confirm/wiki/Migrate-from-v2-to-v3" target="_blank">https://github.com/craftpip/jquery-confirm/wiki/Migrate-from-v2-to-v3</a>
+                    </div>
+
+
+                    <h3 id="installation">
+                        安装
+                    </h3>
+                    <div class="section">
+                        <p>
+                            <strong>Download</strong>
+                            <br> 下载最新版本，并使用 <code>/dist/</code> 文件夹中的文件。
+                        </p>
+
+                        <p>
+                            <strong>via CDN:</strong>
+                            <pre class="prettyprint"><code class="html">&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.3/jquery-confirm.min.css"&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.3/jquery-confirm.min.js"&gt;&lt;/script&gt;</code></pre>
+                        </p>
+
+                        <p>
+                            <strong>via Bower:</strong> <br>
+                            <span>Simply copy these links</span>
+                            <br>
+                            <pre class="prettyprint"><code class="terminal">$ bower install craftpip/jquery-confirm</code></pre>
+                        </p>
+
+                        <p>
+                            <strong>via Npm:</strong>
+                            <br>
+                            <pre class="prettyprint"><code class="terminal">$ npm install jquery-confirm</code></pre>
+                        </p>
+
+                        <p>
+                            <strong>Dependencies（Dependencies）:</strong>
+                        </p>
+                        <ul>
+                            <li>Bootstrap by Twitter >= v3 (optional, if you want to use responsive layouts)</li>
+                            <li>jQuery library > v1.8</li>
+                        </ul>
+                        <div class="alert alert-info">
+                            <i class="fa fa-info fa-fw"></i> 在无 bootstrap 插件时使用jconfirm，可设置 <code>useBootstrap:
+                        false</code>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- basic usage -->
+                <section id="usage">
+                    <h3>快速使用</h3>
+
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4 id="alert">
+                                    <code>$.alert</code>
+                                </h4>
+
+                                <p>
+                                    adds one button (okay) if no buttons are specified, this lets the user to close the modal. 如果没有指定按钮，会自动添加一个（okay）按钮，这可以让用户关闭模型
+                                </p>
+                                <button class="example1 btn btn-primary">alert例子</button>
+                                <script type="text/javascript">
+                                    $('.example1').on('click', function() {
+                                        $.alert({
+                                            title: 'Alert!',
+                                            content: 'Simple alert!',
+                                        });
+                                    });
+                                </script>
+                                <div class="space10"></div>
+                                <pre class="prettyprint linenums"><code class="js">$.alert({
+    title: 'Alert!',
+    content: 'Simple alert!',
+});</code></pre>
+                            </div>
+                            <div class="col-md-12">
+                                <h4 id="confirm">
+                                    <code>$.confirm</code>
+                                </h4>
+
+                                <p>
+                                    if no buttons are specified, two buttons (Okay &amp; cancel) will be added. 如果没有指定按钮，将添加两个按钮（Okay＆cancel）。
+                                </p>
+                            </div>
+                            <div class="col-md-12">
+                                <button class="example2 btn btn-primary">example confirm</button>
+                                <script type="text/javascript">
+                                    $('.example2').on('click', function() {
+                                        $.confirm({
+                                            title: 'Confirm!',
+                                            content: 'Simple confirm!',
+                                            buttons: {
+                                                confirm: function() {
+                                                    $.alert('确定!');
+                                                },
+                                                cancel: function() {
+                                                    $.alert('取消!');
+                                                },
+                                                somethingElse: {
+                                                    text: 'Something else',
+                                                    btnClass: 'btn-blue',
+                                                    keys: [
+                                                        'enter',
+                                                        'shift'
+                                                    ],
+                                                    action: function() {
+                                                        this.$content // reference to the content
+                                                        $.alert('Something else?');
+                                                    }
+                                                }
+                                            }
+                                        });
+                                    });
+                                </script>
+                                <div class="space10"></div>
+                                <pre class="prettyprint linenums"><code class="js">$.confirm({
+    title: 'Confirm!',
+    content: 'Simple confirm!',
+    buttons: {
+        confirm: function () {
+            $.alert('确定!');
+        },
+        cancel: function () {
+            $.alert('取消!');
+        },
+        somethingElse: {
+            text: 'Something else',
+            btnClass: 'btn-blue',
+            keys: ['enter', 'shift'],
+            action: function(){
+                $.alert('Something else?');
+            }
+        }
+    }
+});
+                                </code></pre>
+
+                                <h5>Showing prompt using confirm（显示提示）</h5>
+                                <p>
+                                    Simply add form to the content and bind the events you want. （只需将表单添加到内容并绑定所需的事件。）
+                                    <br> This form can also be loaded via ajax.（此表单也可通过ajax加载。）
+                                </p>
+                                <button class="example2-2 btn btn-primary">example prompt</button>
+                                <script type="text/javascript">
+                                    $('.example2-2').on('click', function() {
+                                        $.confirm({
+                                            title: 'Prompt!',
+                                            content: '' +
+                                                '<form action="" class="formName">' +
+                                                '<div class="form-group">' +
+                                                '<label>Enter something here</label>' +
+                                                '<input type="text" placeholder="Your name" class="name form-control" required />' +
+                                                '</div>' +
+                                                '</form>',
+                                            buttons: {
+                                                formSubmit: {
+                                                    text: '提交',
+                                                    btnClass: 'btn-blue',
+                                                    action: function() {
+                                                        var name = this.$content.find('.name').val();
+                                                        if (!name) {
+                                                            $.alert('provide a valid name');
+                                                            return false;
+                                                        }
+                                                        $.alert('Your name is ' + name);
+                                                    }
+                                                },
+                                                cancel: function() {
+                                                    //close
+                                                },
+                                            },
+                                            onContentReady: function() {
+                                                // you can bind to the form
+                                                var jc = this;
+                                                this.$content.find('form').on('submit', function(e) { // if the user submits the form by pressing enter in the field.
+                                                    e.preventDefault();
+                                                    jc.$$formSubmit.trigger('click'); // reference the button and click it
+                                                });
+                                            }
+                                        });
+                                    });
+                                </script>
+                                <div class="space10"></div>
+                                <pre class="prettyprint linenums"><code class="js">$.confirm({
+    title: 'Prompt!',
+    content: '' +
+    '&lt;form action="" class="formName"&gt;' +
+    '&lt;div class="form-group"&gt;' +
+    '&lt;label&gt;Enter something here&lt;/label&gt;' +
+    '&lt;input type="text" placeholder="Your name" class="name form-control" required /&gt;' +
+    '&lt;/div&gt;' +
+    '&lt;/form&gt;',
+    buttons: {
+        formSubmit: {
+            text: 'Submit',
+            btnClass: 'btn-blue',
+            action: function () {
+                var name = this.$content.find('.name').val();
+                if(!name){
+                    $.alert('provide a valid name');
+                    return false;
+                }
+                $.alert('Your name is ' + name);
+            }
+        },
+        cancel: function () {
+            //close
+        },
+    },
+    onContentReady: function () {
+        // bind to events
+        var jc = this;
+        this.$content.find('form').on('submit', function (e) {
+            // if the user submits the form by pressing enter in the field.
+            e.preventDefault();
+            jc.$$formSubmit.trigger('click'); // reference the button and click it
+        });
+    }
+});</code></pre>
+
+                            </div>
+
+
+                            <div class="col-md-12">
+                                <h4 id="dialog">
+                                    <code>$.dialog</code>
+                                </h4>
+
+                                <p>
+                                    removes buttons and explicitly shows the closeIcon (&times;) （有一移除按钮）
+                                </p>
+                                <button class="example2-1 btn btn-primary">example dialog</button>
+                                <script type="text/javascript">
+                                    $('.example2-1').on('click', function() {
+                                        $.dialog({
+                                            title: 'Text content!',
+                                            content: 'Simple modal!',
+                                            buttons: {
+                                                aRandomButton: function() {
+                                                    // this will be removed.
+                                                }
+                                            }
+                                        });
+                                    });
+                                </script>
+                                <div class="space10"></div>
+                                <pre class="prettyprint linenums"><code class="js">$.dialog({
+    title: 'Text content!',
+    content: 'Simple modal!',
+});</code></pre>
+                            </div>
+                            <div class="col-md-12">
+                                <h4 id="jquery-fn"><code>$.fn.confirm</code></h4>
+                                <p>This can be used to bind to a element directly这可以直接绑定到元素
+                                    <br/> If no buttons are defined, the default buttons (okay and cancel) will be added, and default action for okay will be to redirect on the given href. use
+                                    <a href="#api-target">this.$target</a> to get the clicked element. 如果没有定义任何按钮，将添加默认按钮（okay 和 cancel），默认操作中的okay行为,会给定的href上重定向。 使用this.$target来获取点击的元素。
+                                </p>
+                                <p>
+                                    <a class="example2-1-1 btn btn-primary" data-title="Goto twitter?" href="http://twitter.com/craftpip">Goto twitter
+                                </a>
+                                </p>
+                                <script>
+                                    $('.example2-1-1').confirm({
+                                        content: "This will take you to my twitter <br> You can access the clicked element by <code>this.$target</code>",
+                                    });
+                                </script>
+                                <span>HTML</span>
+                                <pre class="prettyprint linenums"><code class="html">&lt;a class="twitter" data-title="Goto twitter?" href="http://twitter.com/craftpip"&gt;Goto twitter&lt;/a&gt;</code></pre>
+                                <span>Javascript</span>
+                                <pre class="prettyprint linenums"><code class="js">$('a.twitter').confirm({
+    content: "...",
+});
+$('a.twitter').confirm({
+    buttons: {
+        hey: function(){
+            location.href = this.$target.attr('href');
+        }
+    }
+});</code></pre>
+
+                            </div>
+                            <div class="col-md-12">
+                                <h4 id="shorthand">快速使用</h4>
+
+                                <p>
+                                    The shorthand thingy takes in two string arguments, first one is the content of the dialog and second the title of the dialog. The second argument is optional. （简写中有两个字符串参数，第一个是对话框的内容，第二个是对话框的标题。 第二个参数是可选的。）
+                                </p>
+                                <pre class="prettyprint linenums"><code class="js">$.alert('Content here', 'Title here'); <a
+                                    href="#"
+                                    class="example-sh-1">try me</a>
+$.confirm('A message', 'Title is optional'); <a href="#"
+                                                class="example-sh-2">try me</a>
+$.dialog('Just to let you know'); <a href="#"
+                                     class="example-sh-3">try me</a></code></pre>
+                            </div>
+                            <script>
+                                $('.example-sh-1').click(function(e) {
+                                    e.preventDefault();
+                                    $.alert('Content here', 'Title here');
+                                });
+                                $('.example-sh-2').click(function(e) {
+                                    e.preventDefault();
+                                    $.confirm('A message', 'Title is optional');
+                                });
+                                $('.example-sh-3').click(function(e) {
+                                    e.preventDefault();
+                                    $.dialog('Just to let you know');
+                                });
+                            </script>
+                            <div class="col-md-12">
+                                <h4 id="lazy-open">Lazy open</h4>
+                                <p>
+                                    If you want to create a instance of jconfirm and save it for later use. 如果要创建一个jconfirm的实例并保存以供将来使用。
+                                </p>
+                                <pre class="prettyprint linenums"><code class="js">var a = $.confirm({
+    lazyOpen: true,
+});
+a.open();
+a.close();
+a.toggle(); // toggle open close.</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div style="height: 15px;"></div>
+                <div class="alert alert-info">
+                    <p>
+                        <i class="fa fa-bookmark fa-fw"></i>
+                        <strong>NOTE</strong> : The <code>$.confirm()</code>, <code>$.dialog()</code> &amp; <code>$.alert()</code> methods are alias of <code>jconfirm()</code>.<br>
+                        <i class="fa fa-fw"></i> All three methods indirectly call the jconfirm base function altering the provided options. $ .confirm（），$ .dialog（）＆$ .alert（）方法是jconfirm（）的别名。   所有三种方法间接地调用jconfirm基函数来改变提供的选项。
+                    </p>
+                </div>
+                <div class="alert alert-warning">
+                    <p>
+                        <i class="fa fa-info fa-fw"></i>
+                        <strong>高级:</strong>
+                        <code>this.$body</code> is the body div for jquery-confirm. You can find and alter any element at run time.
+                        <code>this.$body</code> 用于jquery-confirm的主体。 您可以在运行时找到并更改任何元素。
+                    </p>
+                </div>
+
+                <section id="buttons">
+                    <h2>Buttons按钮</h2>
+                    <p>
+                        Its all what you need to know about buttons in jquery-confirm v3.
+                        <br> Defining multiple buttons is introduced in v3.定义多个按钮在v3中引入
+                    </p>
+                    <div class="alert alert-info">
+                        You can access the button element via <code>this.$$heyThere</code> for heyThere button in the below snippet. （您可以通过
+                        <code>this.$$heyThere</code>访问按钮元素。）
+                        <br>this is to change the button properties at run time.（这是在运行时更改按钮属性。）
+                    </div>
+                    <h4 id="defining-buttons">
+                        Definition（定义）
+                    </h4>
+                    <div class="section">
+                        <p>
+                            Buttons can be defined in the following fashion, pretty self explanatory. （按钮可以以下列方式定义）
+                        </p>
+                        <pre class="prettyprint linenums"><code class="html">$.confirm({
+    buttons: {
+        hello: function(){
+            // button action
+        },
+        hey: function(){
+            this.$$hello.trigger('click'); // 点击其他按钮
+            this.buttons.hello.setText('Helloooo'); // 做什么
+
+            this.$$hey.prop('disabled', true); // 当前按钮不能点
+            // or
+            this.buttons.hey.disable();
+        },
+        heyThere: {
+            text: 'Hey there!',
+            btnClass: 'btn-blue',
+            keys: ['enter', 'a'],
+            isHidden: false, //初始化不隐藏
+            isDisabled: false, // 初始化可点
+            action: function(){
+                // button action.
+            }
+        },
+    }
+});</code></pre>
+
+
+                    </div>
+                    <h4 id="buttontext">按钮文字</h4>
+                    <div class="section">
+                        <button class="btn btn-primary example3">点击我!</button>
+                        <script type="text/javascript">
+                            $('.example3').on('click', function() {
+                                $.confirm({
+                                    buttons: {
+                                        something: function() {
+                                            // here the button key 'something' will be used as the text.
+                                            $.alert('You clicked on something.');
+                                        },
+                                        somethingElse: {
+                                            text: 'Something else &*', // Some Non-Alphanumeric characters
+                                            action: function() {
+                                                $.alert('You clicked on something else');
+                                            }
+                                        }
+                                    }
+                                })
+                            });
+                        </script>
+                        <div class="space10"></div>
+                        <pre class="prettyprint linenums"><code class="html">$.confirm({
+    buttons: {
+        something: function(){
+            // here the key 'something' will be used as the text.
+            $.alert('You clicked on something.');
+        },
+        somethingElse: {
+            text: 'Something else &*', // Some Non-Alphanumeric characters
+            action: function(){
+                $.alert('You clicked on something else');
+            }
+        }
+    }
+});</code></pre>
+                    </div>
+                    <h4 id="buttonstyle">按钮样式</h4>
+
+                    <div class="section">
+                        <p>简单地将class应用到按钮.</p>
+                        <p class="text-info">
+                            Jconfirm comes bundled with <code>btn-blue</code> <code>btn-green</code> <code>btn-red</code>
+                            <code>btn-orange</code> <code>btn-purple</code> <code>btn-default</code> <code>btn-dark</code>
+                        </p>
+                        <p class="text-info">
+                            Other bootstrap options are <code>btn-primary</code> <code>btn-inverse</code>
+                            <code>btn-warning</code>
+                            <code>btn-info</code> <code>btn-danger</code> <code>btn-success</code>.
+                        </p>
+                        <button class="btn btn-primary example3-1-jc">使用jconfirm随附的按钮!</button>
+                        <button class="btn btn-primary example3-1">使用bootstrap按钮!</button>
+                        <script type="text/javascript">
+                            $('.example3-1').on('click', function() {
+                                $.confirm({
+                                    buttons: {
+                                        default: {
+                                            btnClass: 'btn-default',
+                                        },
+                                        info: {
+                                            btnClass: 'btn-info',
+                                        },
+                                        success: {
+                                            btnClass: 'btn-success custom-class',
+                                        },
+                                        danger: {
+                                            btnClass: 'btn-danger custom-class',
+                                        },
+                                        warning: {
+                                            btnClass: 'btn-warning',
+                                        },
+                                    }
+                                });
+                            });
+                            $('.example3-1-jc').on('click', function() {
+                                $.confirm({
+                                    buttons: {
+                                        default: {
+                                            btnClass: 'btn-default',
+                                        },
+                                        blue: {
+                                            btnClass: 'btn-blue',
+                                        },
+                                        green: {
+                                            btnClass: 'btn-green',
+                                        },
+                                        red: {
+                                            btnClass: 'btn-red',
+                                        },
+                                        orange: {
+                                            btnClass: 'btn-orange',
+                                        },
+                                        purple: {
+                                            btnClass: 'btn-purple',
+                                        },
+                                        dark: {
+                                            btnClass: 'btn-dark',
+                                        },
+                                    }
+                                });
+                            });
+                        </script>
+                        <div class="space10"></div>
+                        <pre class="prettyprint linenums"><code class="html">$.confirm({
+    buttons: {
+        info: {
+            btnClass: 'btn-blue',
+            action: function(){}
+        },
+        danger: {
+            btnClass: 'btn-red any-other-class', // multiple classes.
+            ...
+        },
+        warning: {
+            btnClass: 'btn-warning',
+            ...
+        },
+    }
+});</code></pre>
+                    </div>
+
+                    <h4 id="button_keys">Button keys(按键)</h4>
+
+                    <div class="section">
+                        <p>
+                            Listen to keyup events for individual buttons. A button can listen for multiple keys at a time. (监听单个按钮的按键事件。 一次按钮可以一次监听多个键。)
+                        </p>
+                        <div class="alert alert-info">
+                            可用选项: <br> a to Z, tilde, enter, shift, tab, capslock, ctrl, win, alt, esc, space.
+                        </div>
+                        <button class="btn btn-primary example3-1-a">点击我!</button>
+                        <div class="space10"></div>
+                        <pre class="prettyprint linenums"><code class="html">$.confirm({
+    buttons: {
+        specialKey: {
+            text: 'On behalf of shift',
+            keys: ['shift', 'alt'],
+            action: function(){
+                $.alert('Shift or Alt was pressed');
+            }
+        },
+        alphabet: {
+            text: 'A, B',
+            keys: ['a', 'b'],
+            action: function(){
+                $.alert('A or B was pressed');
+            }
+        }
+    }
+});</code></pre>
+
+                        <button type="button" class="btn btn-primary example3-1-1">另一个重要的例子
+                    </button>
+                        <div class="space10"></div>
+                        <p>
+                            In this example, the YES button is hidden using bootstrap's hide class, thus the user can only use keys to proceed. （在此示例中，使用bootstrap隐藏类隐藏“YES”按钮，因此用户只能使用键继续操作。）
+                        </p>
+                        <pre class="prettyprint linenums"><code class="html">$.confirm({
+    title: false,
+    content: 'A very very critical action here! &lt;br&gt; ' +
+             'the proceed button is hidden.' +
+             'The only way to proceed is to press the key &lt;strong&gt;Y&lt;/strong&gt;.&lt;br&gt;' +
+             'Press &lt;span style="font-size: 20px;"&gt;Y&lt;/span&gt; to proceed.',
+    buttons: {
+        yes: {
+            isHidden: true, // 通过css隐藏按钮
+            keys: ['y'],
+            action: function () {
+                $.alert('Critical action &lt;strong&gt;was performed&lt;/strong&gt;.');
+            }
+        },
+        no: {
+            keys: ['N'],
+            action: function () {
+                $.alert('You clicked No.');
+            }
+        },
+    }
+});</code></pre>
+                        <script type="text/javascript">
+                            $('.example3-1-a').on('click', function() {
+                                $.confirm({
+                                    buttons: {
+                                        specialKey: {
+                                            text: 'On behalf of shift',
+                                            keys: [
+                                                'shift',
+                                                'alt'
+                                            ],
+                                            action: function() {
+                                                $.alert('Shift or Alt was pressed');
+                                            }
+                                        },
+                                        alphabet: {
+                                            text: 'A, B',
+                                            keys: [
+                                                'a',
+                                                'b'
+                                            ],
+                                            action: function() {
+                                                $.alert('A or B was pressed');
+                                            }
+                                        }
+                                    }
+                                });
+                            });
+
+                            $('.example3-1-1').on('click', function() {
+                                $.confirm({
+                                    title: false,
+                                    content: 'A very very critical action here! <br> ' +
+                                        'the proceed button is hidden.' +
+                                        'The only way to proceed is to press the key <strong>Y</strong>.<br>' +
+                                        'Press <span style="font-size: 20px;">Y</span> to proceed.',
+                                    buttons: {
+                                        yes: {
+                                            isHidden: true,
+                                            keys: ['y'],
+                                            action: function() {
+                                                $.alert('Critical action <strong>was performed</strong>.');
+                                            }
+                                        },
+                                        no: {
+                                            keys: ['N'],
+                                            action: function() {
+                                                $.alert('You clicked No.');
+                                            }
+                                        },
+                                    }
+                                });
+                            });
+                        </script>
+                    </div>
+
+                    <h4 id="button-functions">Button functions（按钮功能）</h4>
+                    <div class="section">
+                        <p>
+                            Button functions provide a nice and clean way to alter your buttons in run-time. （按钮功能提供了一个漂亮干净的方式来更改运行时的按钮。）
+                            <br> if this is not enough you can use <code>this.$$&lt;buttonName&gt;</code> to get the DOM element （如果这还不够，
+                            <code>this.$$&lt;buttonName&gt;</code>来获取DOM元素）
+                        </p>
+                        <button class="btn btn-primary example3-1-a-f-1">Try me</button>
+                        <div class="space10"></div>
+                        <pre class="prettyprint linenums"><code class="html">$.confirm({
+    buttons: {
+       buttonA: {
+            text: 'button a',
+            action: function () {
+                this.buttons.buttonB.setText('Changed it!');
+                return false;
+            }
+        },
+        buttonB: {
+            text: 'button b',
+            action: function () {
+                this.buttons.buttonA.disable();
+                return false;
+            }
+        },
+        reset: function () {
+            this.buttons.buttonB.show();
+            this.buttons.buttonA.enable();
+            this.buttons.buttonB.setText('button B!!');
+            // this.buttons.buttonA.hide();
+            // this.buttons.buttonA.show();
+            return false;
+        }
+    }
+});</code></pre>
+                        <p>
+                            完整的按钮功能列表。
+                        </p>
+                        <table class="table table-bordered table-condensed">
+                            <tr>
+                                <td>
+                                    Function（功能）
+                                </td>
+                                <td>
+                                    Code（代码）
+                                </td>
+                                <td>
+                                    Description（描述）
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    setText
+                                </td>
+                                <td>
+                                    this.buttons.&lt;buttonName&gt;.setText(text)
+                                </td>
+                                <td>
+                                    要设置的文本
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    addClass
+                                </td>
+                                <td>
+                                    this.buttons.&lt;buttonName&gt;.addClass(className)
+                                </td>
+                                <td>
+                                    给按钮添加class
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    removeClass
+                                </td>
+                                <td>
+                                    this.buttons.&lt;buttonName&gt;.removeClass(className)
+                                </td>
+                                <td>
+                                    从按钮中移除class
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    disable
+                                </td>
+                                <td>
+                                    this.buttons.&lt;buttonName&gt;.disable()
+                                </td>
+                                <td>
+                                    按钮不可用
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    enable
+                                </td>
+                                <td>
+                                    this.buttons.&lt;buttonName&gt;.enable()
+                                </td>
+                                <td>
+                                    Enable the button
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    show
+                                </td>
+                                <td>
+                                    this.buttons.&lt;buttonName&gt;.show()
+                                </td>
+                                <td>
+                                    通过CSS控制显示button
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    hide
+                                </td>
+                                <td>
+                                    this.buttons.&lt;buttonName&gt;.hide()
+                                </td>
+                                <td>
+                                    通过CSS控制隐藏button
+                                </td>
+                            </tr>
+                        </table>
+
+                        <script type="text/javascript">
+                            $('.example3-1-a-f-1').on('click', function() {
+                                $.confirm({
+                                    content: 'Click on the buttons to test it out, <br>Click on the close icon to close the modal',
+                                    closeIcon: true, // to close the modal
+                                    buttons: {
+                                        buttonA: {
+                                            text: 'button a',
+                                            action: function() {
+                                                this.buttons.buttonB.setText('Changed it!');
+                                                return false;
+                                            }
+                                        },
+                                        buttonB: {
+                                            text: 'button b',
+                                            action: function() {
+                                                this.buttons.buttonA.disable();
+                                                return false;
+                                            }
+                                        },
+                                        reset: function() {
+                                            this.buttons.buttonB.show();
+                                            this.buttons.buttonA.enable();
+                                            this.buttons.buttonB.setText('button B!!');
+                                            // this.buttons.buttonA.hide();
+                                            // this.buttons.buttonA.show();
+                                            return false;
+                                        }
+                                    }
+                                });
+                            });
+                        </script>
+                    </div>
+
+
+                </section>
+
+                <section id="customizing">
+                    <h2>Customizing</h2>
+
+                    <h4 id="dialog-type">Dialog type（对话框类型）</h4>
+
+                    <div class="section">
+                        <p>
+                            Dialog types helps give the user a hint as to what the dialog is about （对话框类型有助于向用户提供有关对话框的提示）
+                        </p>
+
+                        <button class="btn btn-primary example21-t-1">Error/Red dialog</button>
+                        <button class="btn btn-primary example21-t-2">Success/Green dialog</button>
+                        <button class="btn btn-primary example21-t-3">Non animated type dialog</button>
+                        <div class="space10"></div>
+                        <button class="btn btn-primary example21-t-4">orange</button>
+                        <button class="btn btn-primary example21-t-5">blue</button>
+                        <button class="btn btn-primary example21-t-6">purple</button>
+                        <button class="btn btn-primary example21-t-7">dark</button>
+
+                        <script type="text/javascript">
+                            $('.example21-t-1').on('click', function() {
+                                $.confirm({
+                                    title: 'Encountered an error!',
+                                    content: 'Something went downhill, this may be serious',
+                                    type: 'red',
+                                    buttons: {
+                                        omg: {
+                                            text: 'Try again',
+                                            btnClass: 'btn-red',
+                                        },
+                                        close: function() {}
+                                    }
+                                });
+                            });
+                            $('.example21-t-2').on('click', function() {
+                                $.confirm({
+                                    title: 'Congratulations!',
+                                    content: 'Consider something great happened, and you have to show a positive message.',
+                                    type: 'green',
+                                    buttons: {
+                                        omg: {
+                                            text: 'Thank you!',
+                                            btnClass: 'btn-green',
+                                        },
+                                        close: function() {}
+                                    }
+                                });
+                            });
+                            $('.example21-t-3').on('click', function() {
+                                $.confirm({
+                                    title: 'Encountered an error!',
+                                    content: 'Something went downhill, this may be serious',
+                                    type: 'red',
+                                    typeAnimated: false,
+                                    buttons: {
+                                        omg: {
+                                            text: 'Try again',
+                                            btnClass: 'btn-red',
+                                        },
+                                        close: function() {}
+                                    }
+                                });
+                            });
+                            $('.example21-t-4').on('click', function() {
+                                $.confirm({
+                                    title: 'Orange!',
+                                    content: 'Some content here.',
+                                    type: 'orange',
+                                });
+                            });
+                            $('.example21-t-5').on('click', function() {
+                                $.confirm({
+                                    title: 'Blue!',
+                                    content: 'Some content here.',
+                                    type: 'blue',
+                                });
+                            });
+                            $('.example21-t-6').on('click', function() {
+                                $.confirm({
+                                    title: 'Purple!',
+                                    content: 'Some content here.',
+                                    type: 'purple',
+                                });
+                            });
+                            $('.example21-t-7').on('click', function() {
+                                $.confirm({
+                                    title: 'Dark!',
+                                    content: 'Some content here.',
+                                    type: 'dark',
+                                });
+                            });
+                        </script>
+                        <div class="space10"></div>
+                        <pre class="prettyprint linenums"><code>  $.confirm({
+    title: 'Encountered an error!',
+    content: 'Something went downhill, this may be serious',
+    type: 'red',
+    typeAnimated: true,
+    buttons: {
+        tryAgain: {
+            text: 'Try again',
+            btnClass: 'btn-red',
+            action: function(){
+            }
+        },
+        close: function () {
+        }
+    }
+});</code></pre>
+                    </div>
+
+                    <h4 id="icons">Icons</h4>
+
+                    <div class="section">
+                        <p>Give meaning to your dialog with custom icons.（使用自定义图标为您的对话框提供意义。）
+                            <br> Read about Font Awesome
+                            <a href="http://fortawesome.github.io/Font-Awesome">here</a> .
+                        </p>
+
+                        <button class="btn btn-primary example21-2">Using font-awesome</button>
+                        <button class="btn btn-primary example21-3">Animated font-awesome</button>
+                        <script type="text/javascript">
+                            $('.example21-2').on('click', function() {
+                                $.confirm({
+                                    icon: 'fa fa-warning', // glyphicon glyphicon-heart
+                                    title: 'font-awesome'
+                                });
+                            });
+                            $('.example21-3').on('click', function() {
+                                $.alert({
+                                    icon: 'fa fa-spinner fa-spin',
+                                    title: 'Working!',
+                                    content: 'Sit back, we are processing your request. <br>The animated icon is provided by Font-Awesome!'
+                                });
+                            });
+                        </script>
+                        <div class="space10"></div>
+                        <pre class="prettyprint linenums"><code>$.confirm({
+    icon: 'glyphicon glyphicon-heart',
+    title: 'glyphicon'
+});
+$.confirm({
+    icon: 'fa fa-warning',
+    title: 'font-awesome'
+});
+$.confirm({
+    icon: 'fa fa-spinner fa-spin',
+    title: 'Working!',
+    content: 'Sit back, we are processing your request!'
+});</code></pre>
+                    </div>
+
+                    <h4 id="close-icon">Close icon</h4>
+
+                    <div class="section">
+                        <p>
+                            jQuery confirm uses <code>&amp;times;</code> html entity for this close symbol, however you can use Any icon of your choice (fa, glyphicon, zmdi) （jQuery confirm使用<code>&amp;times;</code>这个关闭符号的html实体，但是你可以使用你选择的任何图标（fa，glyphicon，zmdi））
+                        </p>
+
+                        <div class="alert alert-info">
+                            By default <code>closeIcon</code> is set to <code>null</code>. That means, if buttons are not defined the closeIcon will be shown, else will not be shown. （默认情况下，
+                            <code>closeIcon</code>设置为<code>null</code>。 这意味着如果没有定义按钮，则closeIcon将被显示，否则将不显示。）
+                            <br> To explicitly show <code>closeIcon</code> set it to a truthy value and vise versa.（要明确显示closeIcon将其设置为真值，反之亦然）
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>
+                                    Turn on closeIcon explicitly（明确使用closeIcon）
+                                </p>
+                                <button class="example15-1-3-4 btn btn-primary">With closeIcon</button>
+                                <div class="space10"></div>
+                                <pre class="prettyprint linenums"><code>$.confirm({
+    closeIcon: true
+});</code></pre>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    Using other libraries for icons（使用其他库的图标）
+                                </p>
+                                <button class="example15-1-3-5 btn btn-primary">Using glyphicon</button>
+                                <button class="example15-1-3-6 btn btn-primary">Using font awesome</button>
+                                <div class="space10"></div>
+                                <pre class="prettyprint linenums"><code>$.confirm({
+    closeIcon: true,
+    closeIconClass: 'fa fa-close'
+});</code></pre>
+                            </div>
+                        </div>
+
+                        <h4>
+                            <i class="fa fa-info"></i> Handle closeIcon's callback（处理closeIcon的回调）
+                        </h4>
+                        <p>
+                            Control what happens when close icon is clicked.（控制点击关闭图标时会发生什么。）
+                            <br> closeIcon can take in function to handle the button click or you can return a button name. （closeIcon可以处理按钮单击功能，也可以返回按钮名称。）
+                        </p>
+                        <button class="example15-1-3-5-1 btn btn-primary">Test it</button>
+                        <div class="space10"></div>
+                        <pre class="prettyprint linenums"><code>$.confirm({
+    closeIcon: function(){
+        return false; // to prevent close the modal.
+        // or
+        return 'aRandomButton'; // set a button handler, 'aRandomButton' prevents close.
+    },
+    // or
+    closeIcon: 'aRandomButton', // set a button handler
+    buttons: {
+        aRandomButton: function(){
+            $.alert('A random button is called, and i prevent closing the modal');
+            return false; // you shall not pass
+        },
+        close: function(){
+        }
+    }
+});</code></pre>
+
+                        <script>
+                            $('.example15-1-3-4').click(function() {
+                                $.alert({
+                                    closeIcon: true,
+                                });
+                            });
+                            $('.example15-1-3-5').click(function() {
+                                $.alert({
+                                    closeIcon: true,
+                                    closeIconClass: 'glyphicon glyphicon-remove',
+                                });
+                            });
+                            $('.example15-1-3-6').click(function() {
+                                $.alert({
+                                    closeIcon: true,
+                                    closeIconClass: 'fa fa-close'
+                                })
+                            });
+                            $('.example15-1-3-5-1').click(function() {
+                                $.confirm({
+                                    content: "关闭图标现在由（'aRandomButton'）按钮处理，如果按钮返回一个伪造值，则模式不会关闭。" +
+                                        "<br>点击关闭图标尝试一下",
+                                    closeIcon: 'aRandomButton', // set a button handler
+                                    buttons: {
+                                        aRandomButton: function() {
+                                            $.alert('一个随机按钮被调用，我阻止关闭模型');
+                                            return false; // you shall not pass
+                                        },
+                                        close: function() {}
+                                    }
+                                });
+                            });
+                        </script>
+                    </div>
+                    <h4 id="custom-width">Custom width</h4>
+
+                    <div class="section">
+                        <p>
+                            Jquery-confirm uses bootstrap's grid system for its layout by default. You can simply provide column classes to adjust the modal's width. （默认情况下，Jquery-confirm使用bootstrap网格系统进行布局。 您可以简单地提供列类来调整模态的宽度。）
+                        </p>
+
+                        <p class="text-info"><i class="fa fa-magic fa-fw"></i> You can also set responsive layouts.（您还可以设置响应式布局。 引导网格文档）
+                            <a href="http://getbootstrap.com/examples/grid/" target="_empty">Bootstrap grid docs
+                        </a>
+                        </p>
+
+                        <p>
+                            instead of typing the whole thing, provide keywords like（提供关键字，而不是输入整个事情） <br>
+                            <code>xlarge</code>/<code>xl</code></code> equivalent to（相当于） <code>col-md-12</code> <br>
+                            <code>large</code>/<code>l</code></code> equivalent to （相当于）<code>col-md-8 col-md-offset-2</code>
+                            <br>
+                            <code>medium</code>/<code>m</code></code> equivalent to（相当于） <code>col-md-6 col-md-offset-3</code>
+                            <br>
+                            <code>small</code>/<code>s</code></code> equivalent to （相当于）<code>col-md-4 col-md-offset-4</code>
+                            <br>
+                            <code>xsmall</code>/<code>xs</code></code> equivalent to （相当于）<code>col-md-2 col-md-offset-5</code>
+                        </p>
+
+                        <button class="btn btn-primary grid-1">medium</button>
+                        <button class="btn btn-primary grid-2">small (default)</button>
+                        <button class="btn btn-primary grid-3">col-md-4</button>
+                        <button class="btn btn-primary grid-4">col-md-4 col-md-offset-8</button>
+                        <button class="btn btn-primary grid-5">xlarge</button>
+                        <button class="btn btn-primary grid-6">xlarge (fluid)</button>
+                        <div class="space10"></div>
+                        <script type="text/javascript">
+                            $('.grid-1').on('click', function() {
+                                $.confirm({
+                                    columnClass: 'medium',
+                                }); // empty because its default.
+                            });
+                            $('.grid-2').on('click', function() {
+                                $.confirm({
+                                    columnClass: 'small',
+                                });
+                            });
+                            $('.grid-3').on('click', function() {
+                                $.confirm({
+                                    columnClass: 'col-md-4',
+                                });
+                            });
+                            $('.grid-4').on('click', function() {
+                                $.confirm({
+                                    columnClass: 'col-md-4 col-md-offset-8'
+                                });
+                            });
+                            $('.grid-5').on('click', function() {
+                                $.confirm({
+                                    columnClass: 'xlarge'
+                                });
+                            });
+                            $('.grid-6').on('click', function() {
+                                $.confirm({
+                                    columnClass: 'xlarge',
+                                    containerFluid: true,
+                                });
+                            });
+                        </script>
+                        <pre class="prettyprint linenums"><code>$.confirm({
+    columnClass: 'small'
+});
+$.confirm({
+    columnClass: 'col-md-4'
+});
+$.confirm({
+    columnClass: 'col-md-4 col-md-offset-8 col-xs-4 col-xs-offset-8'
+});
+$.confirm({
+    columnClass: 'col-md-4 col-md-offset-8 col-xs-4 col-xs-offset-8',
+    containerFluid: true, // this will add 'container-fluid' instead of 'container'
+});</code></pre>
+                    </div>
+
+                    <h4 id="custom-width-without-bootstrap">Custom width without Bootstrap（无Bootstrap自定义宽度）</h4>
+
+                    <div class="section">
+                        <p>
+                            Many have a different taste, who wont be using bootstrap in their projects. （许多人有不同的尝试，谁不会在他们的项目中使用bootstrap。）
+                            <br> You can simply provide the width of the modal, in px or any metric you want.（您可以简单地提供模式的宽度，以px或您想要的任何指标。）
+                        </p>
+
+                        <div class="alert alert-warning">
+                            <code>useBootstrap</code> must be set to <code>false</code> to use this feature （必须将useBootstrap设置为false才能使用此功能）
+                            <br> you can globally disable bootstrap by setting jconfirm.defaults（您可以通过设置jconfirm.defaults来全局禁用引导）
+                        </div>
+
+                        <button class="btn btn-primary grid-wo-bootstrap-1">30%</button>
+                        <button class="btn btn-primary grid-wo-bootstrap-2">500px</button>
+                        <div class="space10"></div>
+                        <script type="text/javascript">
+                            $('.grid-wo-bootstrap-1').on('click', function() {
+                                $.confirm({
+                                    boxWidth: '30%',
+                                    useBootstrap: false,
+                                });
+                            });
+                            $('.grid-wo-bootstrap-2').on('click', function() {
+                                $.confirm({
+                                    boxWidth: '500px',
+                                    useBootstrap: false,
+                                });
+                            });
+                        </script>
+                        <pre class="prettyprint linenums"><code>$.confirm({
+    boxWidth: '30%',
+    useBootstrap: false,
+});
+$.confirm({
+    boxWidth: '500px',
+    useBootstrap: false,
+});</code></pre>
+                    </div>
+
+                    <h4 id="namespaced-bootstrap">Namespaced bootstrap（bootstrap命名空间）</h4>
+
+                    <div class="section">
+                        <p>
+                            Namespacing is basically isolating the bootstrap classes names, like turning '.row' to '.custom-row' （命名空间基本上是隔离引导类的名称，例如将'.row'转为'.custom-row'）
+                            <br> If you're using a namespaced bootstrap library, this option is for you. （如果您使用的是bootstrap命名空间库，则此选项适用于您。）
+                        </p>
+                        <p>
+                            <i class="fa fa-info fa-fw"></i> it is ideal to set this in jconfirm.defaults（将它设置为jconfirm.defaults是非常理想的）
+                        </p>
+                        <div class="space10"></div>
+                        <pre class="prettyprint linenums"><code>$.confirm({
+    bootstrapClasses: {
+        container: 'container',
+        containerFluid: 'container-fluid',
+        row: 'row',
+    },
+});</code></pre>
+                    </div>
+                </section>
+
+                <section id="draggable">
+                    <h2>Draggable</h2>
+                    <div class="section">
+                        <p>
+                            使对话框可拖动. simple.
+                        </p>
+                        <div class="alert alert-info">
+                            alignMiddle will be disabled if draggable is enabled. Due to jconfirm's nature of centering itself when the content changes causes UX issues when alignMiddle and draggable are enabled. （如果启用了draggable，alignMiddle将被禁用。 由于jconfirm的本质，当内容发生变化时，会自动对齐，因为启用了alignMiddle和draggable时出现了UX问题。）
+                        </div>
+                        <button class="btn btn-primary example-draggable">Draggable</button>
+                        <div class="space10"></div>
+                        <pre class="prettyprint linenums"><code>$.confirm({
+    title: 'Hello there',
+    content: 'click and hold on the title to drag',
+    draggable: true,
+});</code></pre>
+                        <script>
+                            $('.example-draggable').click(function() {
+                                $.alert({
+                                    title: 'Hello there',
+                                    content: 'click and hold on the title to drag',
+                                    draggable: true,
+                                });
+                            })
+                        </script>
+                    </div>
+                </section>
+
+                <section id="animations">
+                    <h2>Animations（动画）</h2>
+                    <div class="well">
+                        <p>
+                            The animations section is moved to the animations.html page.（动画部分将移动到animations.html页面。）
+                            <br> This page has docs for animations for modal open/close and backgroundDismiss （此页面有用于模态打开/关闭和backgroundDismiss的动画的文档）
+                            <br> It also describes how to create custom animations.（它还描述了如何创建自定义动画。）
+                        </p>
+                        <a class="btn btn-warning" href="animations.html">查看Animations</a>
+                    </div>
+                </section>
+
+                <section id="themes">
+                    <h2>Themes（主题）</h2>
+                    <div class="well">
+                        <p>
+                            The themes section is moved to the themes.html page （主题部分已移至themes.html页面）
+                            <br> This page has docs for themes & how to create custom themes（此页面包含主题文档以及如何创建自定义主题）
+                        </p>
+                        <a class="btn btn-warning" href="themes.html">查看Themes</a>
+                    </div>
+                </section>
+
+                <!-- jquery-confirm home middle -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9535136378177592" data-ad-slot="5978835267" data-ad-format="auto"></ins>
+
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                <section id="ajaxloading">
+                    <h2>Ajax loading（ajax加载）</h2>
+
+                    <p>
+                        With jconfirm you have the power to load content directly when needed via ajax, no extra code. （通过jconfirm，您有权通过ajax直接加载内容，无需额外的代码。）
+                        <br/> 有两种方法可以通过Ajax加载内容:
+                    </p>
+                    <ol>
+                        <li>Pass in String content the URL with "URL:" prepended.（传入字符串内容带有"URL:"的URL前缀。）<br/>
+                            <code>content: "URL:http://example.com/getData?id=1"</code>
+                        </li>
+                        <li>Pass in Function that returns a jQuery ajax promise.（传递函数返回一个jQuery ajax承诺。） <br/>
+                            <code>content: function(){ return $.get(...); }</code>
+                        </li>
+                    </ol>
+                    <div class="alert alert-warning">
+                        <i class="fa fa-info fa-fw"></i> From v3 onwards,
+                        <strong>buttons are not disabled</strong> until ajax call is complete. （从v3起，在ajax调用完成之前，按钮不会被禁用。）<br>
+                        <i class="fa fa-info fa-fw"></i> contentLoaded is called when the ajax is complete. before the content is put in DOM. （当ajax完成时调用contentLoaded。 之前的内容放在DOM中。）
+                    </div>
+                </section>
+                <h4 id="urlprefix">Using the "URL:" prefix（使用"URL:"前缀）</h4>
+
+                <div class="section">
+                    <p>
+                        Using the url prefix is the quick way, however has some limitations like you cannot modify the ajax call's method, dataType, etc. （使用url前缀是快速的方法，但是有一些限制，如你不能修改ajax调用的方法，dataType等。）
+                        <br/>要使用，请使用"URL:"添加您的网址，如 "URL:http://example.com/file.extension"。 <br/>
+                    </p>
+                    <p class="text-info">
+                        <i class="fa fa-lightbulb-o"></i> 注意: the returned data is set as content automatically before contentLoaded callback is called.（在调用contentLoaded回调之前，返回的数据将自动设置为内容。）
+                    </p>
+                    <button class="btn btn-primary example18-1">Load from text.txt</button>
+                    <a class="btn btn-default" href="text.txt" target="new"><i class="fa fa-external-link"></i> view text.txt
+                </a>
+
+                    <div class="space10"></div>
+                    <pre class="prettyprint linenums"><code>$.confirm({
+    title: 'Title',
+    content: 'url:text.txt',
+    onContentReady: function () {
+        var self = this;
+        this.setContentPrepend('&lt;div&gt;Prepended text&lt;/div&gt;');
+        setTimeout(function () {
+            self.setContentAppend('&lt;div&gt;Appended text after 2 seconds&lt;/div&gt;');
+        }, 2000);
+    },
+    columnClass: 'medium',
+});</code></pre>
+
+                    <script type="text/javascript">
+                        $('.example18-1').on('click', function() {
+                            $.confirm({
+                                title: 'Title',
+                                content: 'url:text.txt',
+                                onContentReady: function() {
+                                    var self = this;
+                                    this.setContentPrepend('<div>Prepended text</div>');
+                                    setTimeout(function() {
+                                        self.setContentAppend('<div>Appended text after 2 seconds</div>');
+                                    }, 2000);
+                                },
+                                animation: 'zoom',
+                                columnClass: 'medium',
+                                closeAnimation: 'scale',
+                            });
+                        });
+                    </script>
+                </div>
+
+                <h4 id="ajaxpromise">Using Ajax promise</h4>
+
+                <div class="section">
+                    <p>
+                        This option provides full control over the ajax options and what data is to be inserted. The content takes a function that returns a jQuery promise ($.ajax, $.get, $.post, etc.). In this example a json object is requested, and a part of it is set as content.
+                        （此选项可以完全控制ajax选项以及要插入的数据。 内容需要返回一个jQuery承诺（$.ajax，$.get，$.post等）的函数。 在此示例中，请求一个json对象，并将其一部分设置为内容。）
+                    </p>
+                    <p class="text-info">
+                        <i class="fa fa-lightbulb-o"></i> NOTE: the returned data is NOT set as content automatically, you must set the content yourself.（返回的数据不会自动设置为内容，您必须自行设置内容。）
+                    </p>
+                    <button class="btn btn-primary example18-2">加载bower.json</button>
+                    <a class="btn btn-default" href="bower.json" target="new"><i class="fa fa-external-link"></i> 查看bower.json
+                </a>
+
+                    <div class="space10"></div>
+                    <script type="text/javascript">
+                        $('.example18-2').on('click', function() {
+                            $.confirm({
+                                content: function() {
+                                    var self = this;
+                                    self.setContent('This plugin\'s bower file');
+                                    return $.ajax({
+                                        url: 'bower.json',
+                                        dataType: 'json',
+                                        method: 'get'
+                                    }).done(function(response) {
+                                        self.setContentAppend('<br>Description: ' + response.description);
+                                        self.setContentAppend('<br>Version: ' + response.version);
+                                        self.setTitle(response.name);
+                                    }).fail(function() {
+                                        self.setContent('Something went wrong.');
+                                    }).always(function() {});
+                                },
+                            });
+                        });
+                    </script>
+                    <pre class="prettyprint linenums"><code>$.confirm({
+    content: function () {
+        var self = this;
+        return $.ajax({
+            url: 'bower.json',
+            dataType: 'json',
+            method: 'get'
+        }).done(function (response) {
+            self.setContent('Description: ' + response.description);
+            self.setContentAppend('&lt;br&gt;Version: ' + response.version);
+            self.setTitle(response.name);
+        }).fail(function(){
+            self.setContent('Something went wrong.');
+        });
+    }
+});</code></pre>
+                </div>
+
+
+                <h4 id="content-loaded">Ajax complete callback （ajax请求完毕后回调）<code>contentLoaded</code></h4>
+                <div class="section">
+                    <p>
+                        When the ajax call is complete the <code>contentLoaded</code> function is called with arguments Data, Status & Xhr object. <br>
+                        <span class="text-warning"><code>contentLoaded</code> is called before the content is put in DOM</span> （当ajax调用完成时，将使用参数Data，Status＆Xhr对象调用contentLoaded函数。在将内容放入DOM之前调用contentLoaded）
+                        <br>
+                        <i class="fa fa-info"></i> If you want to do stuff after the content has put in DOM, use <code>onContentReady</code> （如果你想在内容放入DOM后做一些事情，可以使用
+                        <code>onContentReady</code>）
+                    </p>
+                    <div class="space10"></div>
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            <pre class="prettyprint linenums"><code>$.confirm({
+    content: 'url:text.txt',
+    contentLoaded: function(data, status, xhr){
+        // data is already set in content
+        this.setContentAppend('&lt;br&gt;Status: ' + status);
+    }
+});</code></pre>
+                        </div>
+                        <div class="col-md-4">
+                            <p>
+                                Using the url: prefix method
+                            </p>
+                            <button class="btn btn-primary example18-1-1 btn-block">Using contentLoaded callback</button>
+                        </div>
+                        <div class="col-md-8">
+                            <pre class="prettyprint linenums"><code>$.confirm({
+    content: function(){
+        var self = this;
+        self.setContent('Checking callback flow');
+        return $.ajax({
+            url: 'bower.json',
+            dataType: 'json',
+            method: 'get'
+        }).done(function (response) {
+            self.setContentAppend('&lt;br&gt;Done!');
+        }).fail(function(){
+            self.setContentAppend('&lt;br&gt;Fail!');
+        }).always(function(){
+            self.setContentAppend('&lt;br&gt;Always!');
+        });
+    },
+    contentLoaded: function(data, status, xhr){
+        self.setContentAppend('&lt;br&gt;Content loaded!');
+    },
+    onContentReady: function(){
+        this.setContentAppend('&lt;br&gt;Content ready!');
+    }
+});</code></pre>
+                        </div>
+                        <div class="col-md-4">
+                            <p>
+                                Using the Ajax promise method
+                            </p>
+                            <button class="btn btn-primary example18-1-1-1 btn-block">Using contentLoaded callback</button>
+                            <div style="height: 10px;"></div>
+                            <p>
+                                You can set your content in any of the callbacks. callback execution flow:（您可以在任何回调中设置您的内容。 回调执行流程：）
+                            </p>
+                            <ol>
+                                <li>Promise's done</li>
+                                <li>Promise's always</li>
+                                <li>contentLoaded</li>
+                                <li>onContentReady</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <script>
+                        $('.example18-1-1').on('click', function() {
+                            $.confirm({
+                                content: 'url:text.txt',
+                                contentLoaded: function(data, status, xhr) {
+                                    // data is already set in content
+                                    this.setContentAppend('<br>Status: ' + status);
+                                }
+                            });
+                        });
+                        $('.example18-1-1-1').on('click', function() {
+                            $.confirm({
+                                content: function() {
+                                    var self = this;
+                                    self.setContent('Checking callback flow');
+                                    return $.ajax({
+                                        url: 'bower.json',
+                                        dataType: 'json',
+                                        method: 'get'
+                                    }).done(function(response) {
+                                        self.setContentAppend('<br>Done!');
+                                    }).fail(function() {
+                                        self.setContentAppend('<br>Fail!');
+                                    }).always(function() {
+                                        self.setContentAppend('<br>Always!');
+                                    });
+                                },
+                                contentLoaded: function(data, status, xhr) {
+                                    this.setContentAppend('<br>Content loaded!');
+                                },
+                                onContentReady: function() {
+                                    this.setContentAppend('<br>Content ready!');
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+
+                <section>
+                    <h2 id="autoclose">Auto close</h2>
+
+                    <p>
+                        Do a action if the user does not respond within the specified time.（如果用户在指定的时间内没有响应，请执行操作。）
+                        <br> This comes in handly when the user is about to do something critical. （当用户即将做一些关键的事情时，这是一个很好的例子。）
+                        <br/> The <code>autoClose</code> option takes in a string, like <code>'confirm|4000'</code> where confirm is the action to trigger after 4000 milliseconds.（自动关闭选项带有一个字符串，如“confirm | 4000”，其中，确认是4000毫秒后触发的动作。）
+                        <br>
+                        <i class="fa fa-info"></i> autoClose的实际示例
+                    </p>
+
+                    <div class="section">
+                        <button class="btn btn-primary example20">删除用户</button>
+                        <button class="btn btn-primary example21">注销自己</button>
+                        <div class="space10"></div>
+                        <pre class="prettyprint linenums"><code>$.confirm({
+    title: 'Delete user?',
+    content: '如果您没有回复，这个对话框将在6秒内自动触发“取消”',
+    autoClose: 'cancelAction|8000',
+    buttons: {
+        deleteUser: {
+            text: 'delete user',
+            action: function () {
+                $.alert('已删除用户!');
+            }
+        },
+        cancelAction: function () {
+            $.alert('已取消');
+        }
+    }
+});
+$.confirm({
+   title: 'Logout?',
+    content: '您的时间已过，您将在10秒内自动注销.',
+    autoClose: 'logoutUser|10000',
+    buttons: {
+        logoutUser: {
+            text: 'logout myself',
+            action: function () {
+                $.alert('用户已注销');
+            }
+        },
+        cancel: function () {
+            $.alert('canceled');
+        }
+    }
+});</code></pre>
+                        <script type="text/javascript">
+                            $('.example20').on('click', function() {
+                                $.confirm({
+                                    title: '是否删除用户?',
+                                    content: '如果您没有回复，这个对话框将在6秒内自动触发“取消”',
+                                    autoClose: 'cancelAction|8000',
+                                    buttons: {
+                                        deleteUser: {
+                                            text: 'delete user',
+                                            action: function() {
+                                                $.alert('已删除用户!!');
+                                            }
+                                        },
+                                        cancelAction: function() {
+                                            $.alert('已取消');
+                                        }
+                                    }
+                                });
+                            });
+                            $('.example21').on('click', function() {
+                                $.confirm({
+                                    title: '是否注销?',
+                                    content: '您的时间已过，您将在10秒内自动注销.',
+                                    autoClose: 'logoutUser|10000',
+                                    buttons: {
+                                        logoutUser: {
+                                            text: 'logout myself',
+                                            action: function() {
+                                                $.alert('用户已注销');
+                                            }
+                                        },
+                                        cancel: function() {
+                                            $.alert('canceled');
+                                        }
+                                    }
+                                });
+                            });
+                        </script>
+                    </div>
+                </section>
+
+                <section id="backgrounddismiss">
+                    <h2>
+                        Background dismiss（背景层消除）
+                    </h2>
+
+                    <div class="section">
+                        <p>
+                            Control what happens if the user clicks outside the modal.（控制如果用户在模态之外点击会发生什么。） <br/>
+                        </p>
+                        <div class="alert alert-warning">
+                            backgroundDismiss is set to false by default.（backgroundDismiss默认设置为false。）
+                        </div>
+                        <button class="btn btn-primary example22">允许backgroundDismiss</button>
+
+                        <div class="space10"></div>
+                        <pre class="prettyprint linenums"><code>$.confirm({
+    backgroundDismiss: true, // 这将关闭模型
+});
+$.confirm({
+    backgroundDismiss: function(){
+        return false; // 模态不会关闭。
+    },
+});
+$.confirm({
+    backgroundDismiss: function(){
+        return 'buttonName'; // 该按钮将处理它
+    },
+});
+$.confirm({
+    backgroundDismiss: 'buttonName',
+    content: '在这里，backgroundDistiss操作由buttonName处理' +
+    '&lt;div class="checkbox"&gt;&lt;label&gt;&lt;input type="checkbox" id="enableCheckbox"&gt; Enable backgroundDismiss允许背景层关闭&lt;/label&gt;&lt;/div&gt;',
+    buttons: {
+        buttonName: function () {
+            var $checkbox = this.$content.find('#enableCheckbox');
+            return $checkbox.prop('checked');
+        },
+        close: function () {
+        }
+    }
+});</code></pre>
+
+                        <script type="text/javascript">
+                            $('.example22').on('click', function() {
+                                $.confirm({
+                                    backgroundDismiss: 'buttonName',
+                                    content: 'in here the backgroundDismiss action is handled by buttonName在这里，backgroundDistiss操作由buttonName处理' +
+                                        '<div class="checkbox"><label><input type="checkbox" id="enableCheckbox"> Enable backgroundDismiss允许背景层关闭</label></div>',
+                                    buttons: {
+                                        buttonName: function() {
+                                            var $checkbox = this.$content.find('#enableCheckbox');
+                                            return $checkbox.prop('checked');
+                                        },
+                                        close: function() {}
+                                    }
+                                });
+                            });
+                        </script>
+                    </div>
+
+                    <h4 id="backgrounddismiss-animations">Background dismiss animation（背景层消除动画）</h4>
+                    <div class="section">
+                        <p>
+                            Fancy animations to grab users attention. Click outside the modal to see the animation.（花式动画吸引用户注意。 点击模态外观看动画。）
+                        </p>
+                        <button class="btn btn-primary example22-1-1-1">Shake (default)</button>
+                        <button class="btn btn-primary example22-1-1-2">Glow</button>
+
+                        <div class="space10"></div>
+                        <pre class="prettyprint linenums"><code>$.confirm({
+    backgroundDismiss: false,
+    backgroundDismissAnimation: 'shake',
+});
+$.confirm({
+    backgroundDismiss: false,
+    backgroundDismissAnimation: 'glow',
+});</code></pre>
+
+                    </div>
+                    <script>
+                        $('.example22-1-1-1').on('click', function() {
+                            $.confirm({
+                                backgroundDismiss: false,
+                                backgroundDismissAnimation: 'shake',
+                            });
+                        });
+                        $('.example22-1-1-2').on('click', function() {
+                            $.confirm({
+                                backgroundDismiss: false,
+                                backgroundDismissAnimation: 'glow',
+                            });
+                        });
+                    </script>
+                </section>
+
+                <section id="escape-key">
+                    <h2>
+                        Escape key
+                    </h2>
+
+                    <p>
+                        Control what happens when the escape key is pressed. This is enabled by default. （控制按下转义键时会发生什么。 默认情况下启用。）
+                        <br> backgroundDismiss is called when escape key is pressed. if backgroundDismiss is false, it will shake the modal.（当按下转义键时调用backgroundDismiss。 如果backgroundDismiss为false，它将摇动模态。）
+                    </p>
+
+                    <div class="section">
+                        <button class="btn btn-primary example22-1">Esc按钮</button>
+                        <button class="btn btn-primary example22-1-2">Escape key handled with button</button>
+                        <script type="text/javascript">
+                            $('.example22-1').on('click', function() {
+                                $.confirm({
+                                    escapeKey: true,
+                                    backgroundDismiss: false,
+                                });
+                            });
+                            $('.example22-1-2').on('click', function() {
+                                $.confirm({
+                                    escapeKey: 'buttonName',
+                                    buttons: {
+                                        buttonName: function() {
+                                            $.alert('Button name was called');
+                                        },
+                                        close: function() {
+
+                                        }
+                                    }
+                                });
+                            });
+                        </script>
+                        <div class="space10"></div>
+                        <pre class="prettyprint linenums"><code>$.confirm({
+    escapeKey: true,
+    backgroundDismiss: false,
+});
+$.confirm({
+    escapeKey: 'buttonName',
+    buttons: {
+        buttonName: function(){
+            $.alert('Button name was called');
+        },
+        close: function(){
+
+        }
+    }
+});</code></pre>
+                    </div>
+                </section>
+
+
+                <section id="rtl">
+                    <h2>RTL support（RTL支持）</h2>
+
+                    <div class="section">
+                        <p>
+                            If you need to show the confirm box in rtl then you should set the rtl option to true. （如果您需要在rtl中显示确认框，那么您应该将rtl选项设置为true。）
+                        </p>
+                        <button class="btn btn-primary example23-1-1">Try RTL</button>
+                        <button class="btn btn-primary example23-1-1-1">Try RTL with icon</button>
+                        <script type="text/javascript">
+                            $('.example23-1-1').on('click', function() {
+                                $.alert({
+                                    title: 'پیغام',
+                                    content: 'این یک متن به زبان شیرین فارسی است',
+                                    rtl: true,
+                                    theme: 'light',
+                                    closeIcon: true,
+                                    buttons: {
+                                        confirm: {
+                                            text: 'تایید',
+                                            btnClass: 'btn-blue',
+                                            action: function() {
+                                                $.alert('تایید شد.');
+                                            }
+                                        },
+                                        cancel: {
+                                            text: 'انصراف',
+                                            action: function() {
+
+                                            }
+                                        }
+                                    }
+                                });
+                            });
+                            $('.example23-1-1-1').on('click', function() {
+                                $.alert({
+                                    title: 'پیغام',
+                                    icon: 'fa fa-rocket',
+                                    content: 'این یک متن به زبان شیرین فارسی است',
+                                    rtl: true,
+                                    theme: 'light',
+                                    closeIcon: true,
+                                    buttons: {
+                                        confirm: {
+                                            text: 'تایید',
+                                            btnClass: 'btn-blue',
+                                            action: function() {
+                                                $.alert('تایید شد.');
+                                            }
+                                        },
+                                        cancel: {
+                                            text: 'انصراف',
+                                            action: function() {
+
+                                            }
+                                        }
+                                    }
+                                });
+                            });
+                        </script>
+                        <div class="space10"></div>
+                        <pre class="prettyprint linenums"><code>$.alert({
+    title: 'پیغام',
+    content: 'این یک متن به زبان شیرین فارسی است',
+    rtl: true,
+    closeIcon: true,
+    buttons: {
+        confirm: {
+            text: 'تایید',
+            btnClass: 'btn-blue',
+            action: function () {
+                $.alert('تایید شد.');
+            }
+        },
+        cancel: {
+            text: 'انصراف',
+            action: function () {
+
+            }
+        }
+    }
+});</code></pre>
+                    </div>
+                </section>
+
+
+                <section id="callbacks">
+                    <h2>Callbacks</h2>
+
+                    <div class="section">
+                        <p>
+                            Get more control over the modal, mainly important for binding events for the modal elements. （对于模态元素的绑定事件，更多地控制模态非常重要。）
+                            <br>
+                            <i class="fa fa-info fa-fw"></i> contentLoaded callback is called when <a href="#ajaxloading">Ajax loading</a> is used （当使用Ajax加载时调用contentLoaded回调）
+                        </p>
+                        <button class="btn btn-primary example22-1-1">Test Callbacks</button>
+                        <script type="text/javascript">
+                            $('.example22-1-1').on('click', function() {
+                                $.confirm({
+                                    title: false,
+                                    content: 'url:callback.html',
+                                    onContentReady: function() {
+                                        alert('onContentReady');
+                                        var self = this;
+                                        this.buttons.ok.disable();
+                                        this.$content.find('.btn').click(function() {
+                                            self.$content.find('input').val('Chuck norris');
+                                            self.buttons.ok.enable();
+                                        });
+                                    },
+                                    contentLoaded: function(data, status, xhr) {
+                                        alert('contentLoaded: ' + status);
+                                    },
+                                    onOpenBefore: function() {
+                                        alert('onOpenBefore');
+                                    },
+                                    onOpen: function() {
+                                        alert('onOpen');
+                                    },
+                                    onClose: function() {
+                                        alert('onClose');
+                                    },
+                                    onDestroy: function() {
+                                        alert('onDestroy');
+                                    },
+                                    onAction: function(btnName) {
+                                        alert('onAction: ' + btnName);
+                                    },
+                                    buttons: {
+                                        ok: function() {
+
+                                        }
+                                    }
+                                });
+                            });
+                        </script>
+                        <div class="space10"></div>
+                        <pre class="prettyprint linenums"><code>$.confirm({
+    title: false,
+    content: 'url:callback.html',
+    onContentReady: function () {
+        // when content is fetched & rendered in DOM（当内容在DOM中获取和呈现时）
+        alert('onContentReady');
+        var self = this;
+        this.buttons.ok.disable();
+        this.$content.find('.btn').click(function(){
+            self.$content.find('input').val('Chuck norris');
+            self.buttons.ok.enable();
+        });
+    },
+    contentLoaded: function(data, status, xhr){
+        // when content is fetched（获取内容时）
+        alert('contentLoaded: ' + status);
+    },
+    onOpenBefore: function () {
+        // before the modal is displayed.(在模态显示之前。)
+        alert('onOpenBefore');
+    },
+    onOpen: function () {
+        // after the modal is displayed.（在模态显示之后。）
+        alert('onOpen');
+    },
+    onClose: function () {
+        // before the modal is hidden.（在模态隐藏之前。）
+        alert('onClose');
+    },
+    onDestroy: function () {
+        // when the modal is removed from DOM（当模态从DOM移除时）
+        alert('onDestroy');
+    },
+    onAction: function (btnName) {
+        // when a button is clicked, with the button name（当点击按钮时，使用按钮名称）
+        alert('onAction: ' + btnName);
+    },
+    buttons: {
+        ok: function(){
+
+        }
+    }
+});</code></pre>
+                    </div>
+                </section>
+
+
+                <section id="globaldefaults">
+                    <h2>Global defaults（全局默认值）</h2>
+
+                    <div class="section">
+                        <p>
+                            You can setup global settings for your jconfirm.（您可以为您的jconfirm设置全局设置。）
+                        </p>
+
+                        <p class="text-danger"><i class="fa fa-info-circle fa-fw"></i> jconfirm.defaults should be set after the plugin has loaded. of course.（设置jconfirm.defaults应在插件加载后）</p>
+                        <pre class="prettyprint linenums"><code>jconfirm.defaults = {
+    title: 'Hello',
+    titleClass: '',
+    type: 'default',
+    draggable: true,
+    alignMiddle: true,
+    typeAnimated: true,
+    content: 'Are you sure to continue?',
+    buttons: {},
+    defaultButtons: {
+        ok: {
+            action: function () {
+            }
+        },
+        close: {
+            action: function () {
+            }
+        },
+    },
+    contentLoaded: function(data, status, xhr){
+    },
+    icon: '',
+    lazyOpen: false,
+    bgOpacity: null,
+    theme: 'light',
+    animation: 'zoom',
+    closeAnimation: 'scale',
+    animationSpeed: 400,
+    animationBounce: 1.2,
+    rtl: false,
+    container: 'body',
+    containerFluid: false,
+    backgroundDismiss: false,
+    backgroundDismissAnimation: 'shake',
+    autoClose: false,
+    closeIcon: null,
+    closeIconClass: false,
+    watchInterval: 100,
+    columnClass: 'col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1',
+    boxWidth: '50%',
+    scrollToPreviousElement: true,
+    scrollToPreviousElementAnimate: true,
+    useBootstrap: true,
+    offsetTop: 50,
+    offsetBottom: 50,
+    dragWindowGap: 15,
+    bootstrapClasses: {
+        container: 'container',
+        containerFluid: 'container-fluid',
+        row: 'row',
+    },
+    onContentReady: function () {},
+    onOpenBefore: function () {},
+    onOpen: function () {},
+    onClose: function () {},
+    onDestroy: function () {},
+    onAction: function () {}
+};</code></pre>
+                    </div>
+                </section>
+
+                <section id="options">
+                    <h2>Options</h2>
+
+                    <div class="section">
+                        <p>Options, their defaults, possibilities and explanations.（选项，其默认值，可能性和解释。）</p>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Type（类型）</th>
+                                    <th>Default（默认值）</th>
+                                    <th>Description（描述）</th>
+                                </tr>
+                                <tr>
+                                    <td>title</td>
+                                    <td>String, Function</td>
+                                    <td>
+                                        <code>'Hello'</code>
+                                    </td>
+                                    <td>对话框的标题。 <br>也接受返回一个字符串的函数。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>titleClass</td>
+                                    <td>String</td>
+                                    <td>
+                                        <code>''</code>
+                                    </td>
+                                    <td>
+                                        将应用于标题的class。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>type</td>
+                                    <td>String</td>
+                                    <td>
+                                        <code>'default'</code>
+                                    </td>
+                                    <td>
+                                        颜色模态给用户一个成功/失败/警告的暗示，
+                                        <br> 可用选项: 'blue, green, red, orange, purple & dark'
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>typeAnimated</td>
+                                    <td>Boolean</td>
+                                    <td>
+                                        <code>true</code>
+                                    </td>
+                                    <td>
+                                        为颜色添加一点动画。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>draggable</td>
+                                    <td>Boolean</td>
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+                                    <td>
+                                        使对话框可拖动，拖动点是模型的标题，如果标题未定义，模型将不会拖动。
+                                        <br> 当使用draggable时，将alignMiddle设置为false。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>alignMiddle</td>
+                                    <td>Boolean</td>
+                                    <td>
+                                        <code>true</code>
+                                    </td>
+                                    <td>
+                                        该模型将位于屏幕的中心。 当模型中的内容发生变化时，模型就会重新定位。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>content</td>
+                                    <td>String, Function</td>
+                                    <td><code>'Are you sure to continue?'</code></td>
+                                    <td>
+                                        对话框的内容
+                                        <br> Accepts functions that return string or ajax promise.接受返回字符串或ajax承诺的函数
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>contentLoaded</td>
+                                    <td>Function</td>
+                                    <td><code>function(data,status,xhr){}</code></td>
+                                    <td>
+                                        In use only when content is loaded via Ajax. is called on always callback of $.ajax （仅当内容通过Ajax加载时才使用。 被称为总是回调$.ajax）
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>buttons</td>
+                                    <td>Object</td>
+                                    <td><code>{}</code></td>
+                                    <td>
+                                        Multiple definition of buttons（按钮的多重定义）
+                                        <br> please see <a href="#defining-buttons">button definition</a> for button properties请参阅按钮属性的按钮定义
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>icon</td>
+                                    <td>String</td>
+                                    <td><code>''</code></td>
+                                    <td>
+                                        标题前面加上图标类。 例如：'fa fa-icon'
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>lazyOpen</td>
+                                    <td>Boolean</td>
+                                    <td><code>false</code></td>
+                                    <td>
+                                        不立即打开模态
+                                        <br> 需要调用open()函数来打开模态
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>bgOpacity</td>
+                                    <td>Float</td>
+                                    <td><code>null</code></td>
+                                    <td>
+                                        如果为null，则应用主题的默认bg不透明度。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>theme</td>
+                                    <td>String</td>
+                                    <td><code>'light'</code></td>
+                                    <td>对话框的颜色主题。
+                                        <br> 可能选项 'light', 'dark', 'material' &amp; 'bootstrap'
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>animation</td>
+                                    <td>String</td>
+                                    <td><code>'zoom'</code></td>
+                                    <td>
+                                        对话框的打开动画。
+                                        <br> 可能选项： right, left, bottom, top, rotate, none, opacity, scale, zoom, scaleY, scaleX, rotateY, rotateYR (reverse), rotateX, rotateXR (reverse)
+                                        <br>
+                                        <span class="text-info">The 'blur' animation was removed in v1.1.2</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>closeAnimation</td>
+                                    <td>String</td>
+                                    <td><code>'scale'</code></td>
+                                    <td>
+                                        对话框的关闭动画。 与动画选项相同。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>animationSpeed</td>
+                                    <td>Number</td>
+                                    <td><code>500</code></td>
+                                    <td>动画持续时间（毫秒）</td>
+                                </tr>
+                                <tr>
+                                    <td>animationBounce</td>
+                                    <td>Float</td>
+                                    <td><code>1.2</code></td>
+                                    <td>添加一个open Bounce动画, <br>1 = No bounce</td>
+                                </tr>
+                                <tr>
+                                    <td>escapeKey</td>
+                                    <td>Boolean, String</td>
+                                    <td><code>false</code></td>
+                                    <td>
+                                        如为false,ESC按钮将不会工作
+                                        <br> if true, will work, but no callbacks, 如为true,会工作，但无回调
+                                        <br> if string, will be assigned to button.如果字符串，将被分配到按钮
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>rtl</td>
+                                    <td>Boolean</td>
+                                    <td><code>false</code></td>
+                                    <td>
+                                        使用右边的文本布局。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>container</td>
+                                    <td>String</td>
+                                    <td><code>'body'</code></td>
+                                    <td>
+                                        Specify where the generated HTML content for jconfirm should append. <br> By default it appends in the document's &lt;body&gt;. （指定生成的jconfirm的HTML内容应该附加在哪里。默认情况下，它附加在文档的 body 中。）
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>containerFluid</td>
+                                    <td>Boolean</td>
+                                    <td><code>false</code></td>
+                                    <td>
+                                        If true, will use the container-fluid layout, to use the full browser width. (如果为true，将使用容器流体布局，以使用完整的浏览器宽度。)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>backgroundDismiss</td>
+                                    <td>Boolean, String, Function</td>
+                                    <td><code>false</code></td>
+                                    <td>
+                                        如果为false，用户将无法通过点击退出。
+                                        <br> 如果为true，用户将可以点击出来，无回调。
+                                        <br> 如果字符串，将被分配到按钮。
+                                        <br> 如果为function，将被用作回调。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>backgroundDismissAnimation</td>
+                                    <td>String</td>
+                                    <td><code>'shake'</code></td>
+                                    <td>
+                                        Animation to perform to grab the user's attention when user clicks out of the box. (当用户点击开箱即可执行的动画抓取用户的注意力。)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>autoClose</td>
+                                    <td>String</td>
+                                    <td><code>false</code></td>
+                                    <td>
+                                        如果用户没有响应，在指定的时间内自动关闭对话框。
+                                        <br> possible option <code>'buttonName|400'</code> <br>
+
+                                        <p class="text-info">
+                                            the string is divided in two halves with pipe <code>'|'</code>, the first part specifies the button name to trigger. The other half specifies the wait time in milliseconds. 该字符串用管道“|”分成两半，第一部分指定要触发的按钮名称。 另一半指定等待时间（以毫秒为单位）。
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>closeIcon</td>
+                                    <td>Boolean</td>
+                                    <td><code>null</code></td>
+                                    <td>
+                                        默认情况下，如果两个按钮均为false，则CloseIcon可见。(dialog mode).
+                                        <br> 可以通过将此值设置为true来显示closeIcon。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>closeIconClass</td>
+                                    <td>String</td>
+                                    <td><code>false</code></td>
+                                    <td>
+                                        By default jQuery confirm uses &times; html entity for this close symbol. You can provide icon class here to change it. <br> (默认情况下，jQuery确认使用×html实体作为此关闭符号。 你可以在这里提供图标类来改变它。)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>watchInterval</td>
+                                    <td>Number</td>
+                                    <td><code>100</code></td>
+                                    <td>
+                                        观察模式的变化，并以屏幕为中心。 <br>
+                                        <i class="fa fa-info"></i> Added in v 2.5.0
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>columnClass</td>
+                                    <td>String</td>
+                                    <td><code>'col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10
+                                    col-xs-offset-1'</code></td>
+                                    <td>
+                                        提供更好的方式设置自定义宽度和响应。
+                                        <br> You can also set custom widths for different display sizes using the Bootstraps grid.(您还可以使用引导网格为不同的显示大小设置自定义宽度。)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>useBootstrap</td>
+                                    <td>Boolean</td>
+                                    <td><code>true</code></td>
+                                    <td>
+                                        if true, bootstrap classes will be set on the modal. 'columnClass' wil be set on the box. if false, bootstrap classes will not be set, instead 'boxWidth' will be set on the box. 如果为true，则将在模态上设置bootstrap类。 “列类”将在框上设置。 如果为false，则bootstrap类不会被设置，而是在框上设置“boxWidth”。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>boxWidth</td>
+                                    <td>String</td>
+                                    <td><code>'50%'</code></td>
+                                    <td>
+                                        当您不打算在项目中使用bootstrap 时，此选项设置框的宽度
+                                        <br>
+                                        <i class="fa fa-info"></i> 只有在'useBootstrap'设置为false时才会工作，
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>scrollToPreviousElement</td>
+                                    <td>Boolean</td>
+                                    <td><code>true</code></td>
+                                    <td>
+                                        Scroll back to the element that was focused before jconfirm model opened. (滚动到jconfirm模型打开之前聚焦的元素。)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>scrollToPreviousElementAnimate</td>
+                                    <td>Boolean</td>
+                                    <td><code>true</code></td>
+                                    <td>
+                                        动画滚动到上一个元素
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>offsetTop</td>
+                                    <td>Number</td>
+                                    <td><code>50</code></td>
+                                    <td>
+                                        T该模型将保持至少50px的窗口顶部。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>offsetBottom</td>
+                                    <td>Number</td>
+                                    <td><code>50</code></td>
+                                    <td>
+                                        该模型将保持至少50px从Windows底部。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>dragWindowGap</td>
+                                    <td>Number</td>
+                                    <td><code>15</code></td>
+                                    <td>
+                                        该模型将保持至少15px的窗口顶部，左侧和右侧。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>bootstrapClasses</td>
+                                    <td>object</td>
+                                    <td><code>{
+                                    container: 'container',
+                                    containerFluid: 'container-fluid',
+                                    row: 'row',
+                                    }</code></td>
+                                    <td>
+                                        这些是在使用bootstrap时设置的默认类，此选项适用于使用bootstrap命名空间类的人员。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>onContentReady</td>
+                                    <td>Function</td>
+                                    <td><code>function(){}</code></td>
+                                    <td>
+                                        当内容放在DOM中并且模态是打开时被调用。 （当模态完成后）
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>onOpenBefore</td>
+                                    <td>Function</td>
+                                    <td><code>function(){}</code></td>
+                                    <td>
+                                        当模态将被打开时被调用。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>onOpen</td>
+                                    <td>Function</td>
+                                    <td><code>function(){}</code></td>
+                                    <td>
+                                        当模态将被打开时被调用。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>onClose</td>
+                                    <td>Function</td>
+                                    <td><code>function(){}</code></td>
+                                    <td>
+                                        当模态将被打开时被调用。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>onDestroy</td>
+                                    <td>Function</td>
+                                    <td><code>function(){}</code></td>
+                                    <td>
+                                        在模态元素从DOM中删除之后被调用。
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>onAction</td>
+                                    <td>Function</td>
+                                    <td><code>function(buttonName){}</code></td>
+                                    <td>
+                                        当任何按钮被点击时被调用。 buttonName作为参数提供。
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- jquery-confirm home bottom -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9535136378177592" data-ad-slot="5560032868" data-ad-format="auto"></ins>
+
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+                <section id="api">
+                    <h2>Api</h2>
+                    <p>
+                        These are a few stuff, that will let you interact and make changes in your modal on run time. 这些可以让您在运行时进行交互并对您的模态进行更改。
+                        <br> The function <code>$.confirm()</code> returns an object on execution. （函数$.confirm()返回一个正在执行的对象。）
+                        <br>
+                    </p>
+                    <pre class="prettyprint linenums"><code>var jc = $.confirm({
+    title: 'awesome',
+    onContentReady: function(){
+        // this === jc
+    }
+});</code></pre>
+
+                    <div>
+                        <h4 id="api-settitle">
+                            <code>jc.setTitle(string)</code>
+                        </h4>
+
+                        <p><kbd>function</kbd></p>
+
+                        <div class="section">
+                            <p>设置标题并覆盖jc.title</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-setcontent">
+                            <code>jc.setContent(string)</code>
+                        </h4>
+
+                        <p><kbd>function</kbd></p>
+
+                        <div class="section">
+                            <p>设置内容并覆盖jc.content</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-setcontentprepend">
+                            <code>jc.setContentPrepend(string)</code>
+                        </h4>
+
+                        <p><kbd>function</kbd></p>
+
+                        <div class="section">
+                            <p>Prepends content to content.预览内容到内容</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-setcontentappend">
+                            <code>jc.setContentAppend(string)</code>
+                        </h4>
+                        <p><kbd>function</kbd></p>
+                        <div class="section">
+                            <p>Appends content to content将内容附加到内容</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-set-type">
+                            <code>jc.setType(string)</code>
+                        </h4>
+                        <p><kbd>function</kbd></p>
+                        <div class="section">
+                            <p>Sets a new type class设置一个新的类型类</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-button-settext">
+                            <code>jc.&lt;buttonName&gt;.setText(text)</code>
+                        </h4>
+                        <p><kbd>function</kbd></p>
+                        <div class="section">
+                            <p>Set text for a button设置按钮的文本</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-button-addclass">
+                            <code>jc.&lt;buttonName&gt;.addClass(text)</code>
+                        </h4>
+                        <p><kbd>function</kbd></p>
+                        <div class="section">
+                            <p>向按钮添加一个类</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-button-removeclass">
+                            <code>jc.&lt;buttonName&gt;.removeClass(text)</code>
+                        </h4>
+                        <p><kbd>function</kbd></p>
+                        <div class="section">
+                            <p>从按钮中删除class</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-button-disable">
+                            <code>jc.buttons.&lt;buttonName&gt;.disable()</code>
+                        </h4>
+                        <p><kbd>function</kbd></p>
+                        <div class="section">
+                            <p>通过属性禁止按钮<code>disabled='disabled'</code></p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-button-enable">
+                            <code>jc.buttons.&lt;buttonName&gt;.enable()</code>
+                        </h4>
+                        <p><kbd>function</kbd></p>
+                        <div class="section">
+                            <p>启用以前禁用的按钮</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-button-hide">
+                            <code>jc.buttons.&lt;buttonName&gt;.hide()</code>
+                        </h4>
+                        <p><kbd>function</kbd></p>
+                        <div class="section">
+                            <p>通过 CSS 'display: none'隐藏按钮</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-button-show">
+                            <code>jc.buttons.&lt;buttonName&gt;.show()</code>
+                        </h4>
+                        <p><kbd>function</kbd></p>
+                        <div class="section">
+                            <p>显示以前隐藏的按钮</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-seticon">
+                            <code>jc.setIcon(iconClass)</code>
+                        </h4>
+                        <p><kbd>function</kbd></p>
+                        <div class="section">
+                            <p>设置图标并覆盖jc.icon</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-close">
+                            <code>jc.close()</code>
+                        </h4>
+                        <p><kbd>function</kbd></p>
+                        <div class="section">
+                            <p>The close method closes/destroys the dialog.关闭方法关闭/销毁对话框。</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-open">
+                            <code>jc.open()</code>
+                        </h4>
+
+                        <p><kbd>function</kbd></p>
+
+                        <div class="section">
+                            <p>Opens the modal again, if it is closed.再次打开模态，如果它是关闭的 (Added in v3.0.0)</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-isclosed">
+                            <code>jc.isClosed()</code>
+                        </h4>
+
+                        <p><kbd>function</kbd></p>
+
+                        <div class="section">
+                            <p>
+                                returns true if the modal is closed, else false.如果模态关闭，返回true，否则返回false。
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-isopen">
+                            <code>jc.isOpen()</code>
+                        </h4>
+
+                        <p><kbd>function</kbd></p>
+
+                        <div class="section">
+                            <p>
+                                returns true if the modal is open, else false.如果模态是open，返回true，否则返回false。
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-setdialogcenter">
+                            <code>jc.setDialogCenter()</code>
+                        </h4>
+
+                        <p><kbd>function</kbd></p>
+
+                        <div class="section">
+                            <p>将对话框放在屏幕中心上。 当内容更改时，这是由观看计时器为您完成的。
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-body">
+                            <code>jc.$body</code>
+                        </h4>
+
+                        <p><kbd>jquery DOM element</kbd></p>
+
+                        <div class="section">
+                            <p>
+                                Alias: jc.$b, is the modal body that includes buttons content title and stuff. （别名：jc.$b，是包含按钮内容标题和内容的模态主体。）
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-content">
+                            <code>jc.$content</code>
+                        </h4>
+
+                        <p><kbd>jquery DOM element</kbd></p>
+
+                        <div class="section">
+                            <p>You can access your Dialogs contents via this object.您可以通过此对象访问对话框内容。</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-title">
+                            <code>jc.$title</code>
+                        </h4>
+
+                        <p><kbd>jquery DOM element</kbd></p>
+
+                        <div class="section">
+                            <p>访问模态的标题DOM。 与$ content一样的用法</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 id="api-icon">
+                            <code>jc.$icon</code>
+                        </h4>
+
+                        <p><kbd>jquery DOM element</kbd></p>
+
+                        <div class="section">
+                            <p>访问模式的图标DOM。 与$ content一样的用法 </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 id="api-target">
+                            <code>jc.$target</code>
+                        </h4>
+
+                        <p><kbd>jquery DOM element</kbd></p>
+
+                        <div class="section">
+                            <p>
+                                To access the clicked element, <i class="fa fa-info"></i> only available when using $(element).confirm() and using a confirm callback. （要访问被点击的元素，只有使用$(element).confirm()并使用确认回调才可用。）
+                            </p>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="demo/demo.js"></script>
+    <!-- javascript for the demo page interface. -->
+
+
+    <!--google stuff DO NOT COPY THIS-->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-53264350-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+    <script>
+        window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id))
+                return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+            t._e = [];
+            t.ready = function(f) {
+                t._e.push(f);
+            };
+            return t;
+        }(document, "script", "twitter-wjs"));
+    </script>
+
+    <!--google stuff DO NOT COPY THIS-->
+
+</body>
+
+</html>

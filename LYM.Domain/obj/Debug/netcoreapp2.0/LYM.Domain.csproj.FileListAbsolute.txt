@@ -1,0 +1,9 @@
+E:\NetCore\LYM.NetCore\LYM.Domain\bin\Debug\netcoreapp2.0\LYM.Domain.deps.json
+E:\NetCore\LYM.NetCore\LYM.Domain\bin\Debug\netcoreapp2.0\LYM.Domain.dll
+E:\NetCore\LYM.NetCore\LYM.Domain\bin\Debug\netcoreapp2.0\LYM.Domain.pdb
+E:\NetCore\LYM.NetCore\LYM.Domain\obj\Debug\netcoreapp2.0\LYM.Domain.csprojResolveAssemblyReference.cache
+E:\NetCore\LYM.NetCore\LYM.Domain\obj\Debug\netcoreapp2.0\LYM.Domain.csproj.CoreCompileInputs.cache
+E:\NetCore\LYM.NetCore\LYM.Domain\obj\Debug\netcoreapp2.0\LYM.Domain.AssemblyInfoInputs.cache
+E:\NetCore\LYM.NetCore\LYM.Domain\obj\Debug\netcoreapp2.0\LYM.Domain.AssemblyInfo.cs
+E:\NetCore\LYM.NetCore\LYM.Domain\obj\Debug\netcoreapp2.0\LYM.Domain.dll
+E:\NetCore\LYM.NetCore\LYM.Domain\obj\Debug\netcoreapp2.0\LYM.Domain.pdb

@@ -1,0 +1,430 @@
+/*-------------------------------------
+zTree Style using fontawesome instead of images
+
+version:    1.1
+author:     Mike King
+email:      mikkelking @ hotmail . com
+website:    http://code.google.com/p/jquerytree/
+
+-------------------------------------*/
+/* Definitions ----------------------*/
+/* End of Definitions ---------------*/
+/* Imports  -------------------------*/
+/* End of Imports  ------------------*/
+.ztree * {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+.ztree {
+  margin: 2px;
+  padding: 5px 8px;
+  color: #4d6878;
+  background-color: #fff;
+  position: relative;
+  overflow: auto;
+}
+.ztree::after {
+  content: "";
+  position: absolute;
+  border-left: 1px solid #67b2dd;
+  left: 0px;
+  top: 8px;
+  bottom: 18px;
+  display: inline-block;
+}
+.ztree li {
+  position: relative;
+  padding: 2px;
+  padding-left: 8px;
+  margin: 0;
+  list-style: none;
+  line-height: 17px;
+  text-align: left;
+  white-space: nowrap;
+  outline: 0;
+}
+.ztree li:last-child ul::after,
+.ztree li:last-child::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 11px;
+  bottom: 0;
+  left: -8px;
+  border-left: 1px solid #fff;
+}
+.ztree li::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 18px;
+  height: 0;
+  border-top: 1px solid #67b2dd;
+  z-index: 1;
+}
+.ztree li ul {
+  margin: 0px;
+  padding: 0 0 0 18px;
+  position: relative;
+}
+.ztree li ul::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -4px;
+  bottom: 13px;
+  left: 8px;
+  border: 1px solid #67b2dd;
+  border-width: 0 0 0 1px;
+}
+.ztree li ul li:last-child::after {
+  left: -10px;
+}
+.ztree li ul li::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: -10px;
+  width: 18px;
+  height: 0;
+  border-top: 1px solid #67b2dd;
+  z-index: 1;
+}
+.ztree li a {
+  padding-right: 3px;
+  margin: 0;
+  cursor: pointer;
+  height: 20px;
+  color: #4d6878;
+  background-color: transparent;
+  text-decoration: none;
+  vertical-align: top;
+  display: inline-block;
+}
+.ztree li a input.rename {
+  height: 14px;
+  width: 80px;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  background-color: #4d6878;
+  font-size: 12px;
+  border: 1px #585956 solid;
+  *border: 0px;
+}
+.ztree li a:hover {
+  text-decoration: underline;
+}
+.ztree li a.curSelectedNode {
+  box-sizing: border-box;
+  padding-top: 0px;
+  height: 20px;
+  opacity: 0.8;
+  border-radius: 4px;
+  background: #c2e3f7;
+}
+.ztree li a.curSelectedNode_Edit {
+  padding-top: 0px;
+  background-color: transparent;
+  color: #f9a021;
+  height: 20px;
+  border: 1px #666 solid;
+  opacity: 0.8;
+}
+.ztree li a.tmpTargetNode_inner {
+  padding-top: 0px;
+  background-color: #fde0b6;
+  color: #25323a;
+  height: 20px;
+  border: 1px #666 solid;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.ztree li span {
+  line-height: 20px;
+  margin-right: 2px;
+  background-color: transparent;
+}
+.ztree li span.button {
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1em;
+  width: 18px;
+  display: inline-block;
+  vertical-align: top;
+  border: 0px solid;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+.ztree li span.button::before {
+  color: #4d6878;
+  font-family: FontAwesome;
+  padding-top: 10px;
+}
+.ztree li span.button.chk {
+  margin: 0;
+  cursor: auto;
+  width: 12px;
+  display: inline-block;
+  vertical-align: baseline;
+}
+.ztree li span.button.chk.checkbox_true_disable,
+.ztree li span.button.chk.checkbox_false_disable {
+  background: #ddd;
+  border-style: inset;
+}
+.ztree li span.button.chk.checkbox_false_full::before {
+  content: "\f00d";
+  color: antiquewhite;
+}
+.ztree li span.button.chk.checkbox_false_part::before {
+  content: "\f00d";
+  color: #f2f2f2;
+}
+.ztree li span.button.chk.checkbox_false_disable::before {
+  content: "\f00d";
+  color: #808080;
+}
+.ztree li span.button.chk.checkbox_true_full,
+.ztree li span.button.chk.checkbox_true_full_focus,
+.ztree li span.button.chk.checkbox_false_full_focus,
+.ztree li span.button.chk.checkbox_false_part_focus {
+  border-color: #f9a021;
+}
+.ztree li span.button.chk.checkbox_true_full::before,
+.ztree li span.button.chk.checkbox_true_full_focus::before,
+.ztree li span.button.chk.checkbox_false_full_focus::before,
+.ztree li span.button.chk.checkbox_false_part_focus::before {
+  content: "\f00c";
+  color: #f9a021;
+}
+.ztree li span.button.chk.checkbox_true_part::before,
+.ztree li span.button.chk.checkbox_true_part_focus::before {
+  content: "\f00c";
+  color: #f9a021;
+}
+.ztree li span.button.chk.checkbox_true_disable::before {
+  content: "\f00c";
+  color: #808080;
+}
+.ztree li span.button.chk.radio_false_full::before {
+  content: "\f10c";
+}
+.ztree li span.button.chk.radio_false_full_focus::before {
+  content: "\f10c";
+  color: #f9a021;
+}
+.ztree li span.button.chk.radio_false_part::before {
+  content: "\f10c";
+  color: #7e9bad;
+}
+.ztree li span.button.chk.radio_false_part_focus::before {
+  content: "\f10c";
+  color: #f9a021;
+}
+.ztree li span.button.chk.radio_false_disable::before {
+  content: "\f10c";
+  color: #808080;
+}
+.ztree li span.button.chk.radio_true_full::before,
+.ztree li span.button.chk.radio_true_full_focus::before,
+.ztree li span.button.chk.radio_true_part::before,
+.ztree li span.button.chk.radio_true_part_focus::before {
+  content: "\f111";
+  color: #f9a021;
+}
+.ztree li span.button.chk.radio_true_disable::before {
+  content: "\f111";
+  color: #808080;
+}
+.ztree li span.button.switch,
+.ztree li span.button.chk {
+  width: 13px;
+  height: 13px;
+  position: relative;
+  color: #f9e8ce;
+  line-height: 13px;
+  font-size: 11px;
+  text-align: center;
+  border-radius: 3px;
+  vertical-align: middle;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background-color: #fafafa;
+  border: 1px solid #CCC;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.ztree li span.button.switch {
+  margin-right: 2px;
+}
+.ztree li span.button.switch.center_docu,
+.ztree li span.button.switch.bottom_docu,
+.ztree li span.button.switch.roots_docu {
+  display: none;
+}
+.ztree li span.button.root_open::before,
+.ztree li span.button.roots_open::before,
+.ztree li span.button.center_open::before,
+.ztree li span.button.bottom_open::before {
+  content: "-";
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  left: 3px;
+  font-size: 16px;
+}
+.ztree li span.button.root_close::before,
+.ztree li span.button.roots_close::before,
+.ztree li span.button.center_close::before,
+.ztree li span.button.bottom_close::before {
+  content: "+";
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  left: 2px;
+  font-size: 16px;
+}
+.ztree li span.button.root_docu {
+  background: none;
+}
+.ztree li span.button.roots_docu::before {
+  content: "\f022";
+  padding-left: 2px;
+  display: inline-block;
+  color: #4d6878;
+}
+.ztree li span.button.center_docu::before {
+  padding-top: 10px;
+  padding-left: 2px;
+  display: inline-block;
+  color: #4d6878;
+}
+.ztree li span.button.bottom_docu::before {
+  padding-top: 10px;
+  padding-left: 2px;
+  display: inline-block;
+  color: #4d6878;
+}
+.ztree li span.button.noline_docu {
+  background: none;
+}
+.ztree li span.button.ico_open::before {
+  font-family: FontAwesome;
+  padding-top: 10px;
+  padding-left: 2px;
+  display: inline-block;
+  color: #4d6878;
+}
+.ztree li span.button.ico_close::before {
+  font-family: FontAwesome;
+  padding-top: 10px;
+  padding-left: 2px;
+  display: inline-block;
+  color: #4d6878;
+}
+.ztree li span.button.ico_docu::before {
+  font-family: FontAwesome;
+  padding-top: 10px;
+  padding-left: 2px;
+  display: inline-block;
+  color: #4d6878;
+}
+.ztree li span.button.edit {
+  margin-left: 4px;
+  margin-right: -1px;
+  vertical-align: top;
+  *vertical-align: middle;
+  padding-top: 10px;
+}
+.ztree li span.button.edit::before {
+  content: "\f044";
+  font-family: FontAwesome;
+}
+.ztree li span.button.remove {
+  margin-left: 4px;
+  margin-right: -1px;
+  vertical-align: top;
+  *vertical-align: middle;
+  padding-top: 10px;
+}
+.ztree li span.button.remove::before {
+  content: "\f057";
+  font-family: FontAwesome;
+}
+.ztree li span.button.add {
+  margin-left: 4px;
+  margin-right: -1px;
+  vertical-align: top;
+  *vertical-align: middle;
+  padding-top: 10px;
+}
+.ztree li span.button.add::before {
+  content: "\f055";
+  font-family: FontAwesome;
+}
+.ztree li span.button.ico_loading {
+  margin-right: 2px;
+  background: url(img/loading.gif) no-repeat scroll 0 0 transparent;
+  vertical-align: top;
+  *vertical-align: middle;
+}
+.ico_open::before {
+  content: "\f115";
+}
+.ico_close::before {
+  content: "\f114";
+}
+.ico_docu::before {
+  content: "\f0a4";
+}
+ul.tmpTargetzTree {
+  background-color: #FFE6B0;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+span.tmpzTreeMove_arrow {
+  width: 16px;
+  height: 20px;
+  display: inline-block;
+  padding: 0;
+  margin: 2px 0 0 1px;
+  border: 0 none;
+  position: absolute;
+  background-color: transparent;
+  background-attachment: scroll;
+}
+span.tmpzTreeMove_arrow::before {
+  content: "\f04b";
+  font-family: FontAwesome;
+  color: #f9a021;
+}
+ul.ztree.zTreeDragUL {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  background-color: #cfcfcf;
+  border: 1px #f9a021 dotted;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.ztreeMask {
+  z-index: 10000;
+  background-color: #cfcfcf;
+  opacity: 0.0;
+  filter: alpha(opacity=0);
+  position: absolute;
+}
